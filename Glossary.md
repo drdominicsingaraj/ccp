@@ -21,3 +21,10 @@ Cross-Account and Region Management: Use StackSets to manage resources across mu
 Extension Registry: Discover and utilize a wide range of public and private resource types, modules, and hooks.
 
 These features combine to make AWS CloudFormation a powerful tool for managing AWS resources effectively and efficiently.
+
+# Storage
+
+### comparison table highlighting the key differences between AWS S3, EFS, EBS, and Instance Store:
+
+![alt text](image.png)
+
