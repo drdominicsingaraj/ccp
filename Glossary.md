@@ -1,7 +1,5 @@
 # Cloudformation
 
-### Summary of the benefits of using AWS CloudFormation:
-
 ![alt text](image-6.png)
 
 # Storage
