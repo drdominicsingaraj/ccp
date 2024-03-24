@@ -26,5 +26,5 @@ These features combine to make AWS CloudFormation a powerful tool for managing A
 
 ### Comparison table highlighting the key differences between AWS S3, EFS, EBS, and Instance Store:
 
-
+![alt text](image.png)
 
