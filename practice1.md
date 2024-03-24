@@ -8,7 +8,11 @@ Which service offers volume discounts when you enable Consolidated Billing?
     Amazon CloudFront
 
 Explanation: 
-For billing purposes, AWS treats all of the accounts in the organization as if they were one account. Some services, such as AWS Data Transfer and Amazon S3, have volume pricing tiers across certain usage dimensions that give you lower prices the more you use the service. With consolidated billing, AWS combines the usage from all accounts to determine which volume pricing tiers to apply, giving you a lower overall price whenever possible. AWS then allocates each member account a portion of the overall volume discount based on the account's usage.
+
+When you enable Consolidated Billing in AWS, some services offer volume discounts. For billing purposes, AWS treats all the accounts in the organization as if they were one account. Services such as Amazon S3 have volume pricing tiers that give you lower prices the more you use the service. With consolidated billing, AWS combines the usage from all accounts to determine which volume pricing tiers to apply, potentially giving you a lower overall price1.
+
+So, among the options you’ve provided, Amazon S3 is the service that offers volume discounts when you enable Consolidated Billing.
+
 For example, let's say that Bob's consolidated bill includes both Bob's own account and Susan's account. Bob's account is the management account, so he pays the charges for both himself and Susan.
 Bob transfers 8 TB of data during the month and Susan transfers 4 TB.
 
