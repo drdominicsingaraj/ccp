@@ -41,3 +41,7 @@ These features combine to make AWS CloudFormation a powerful tool for managing A
 # Block Storage vs Object Storage 
 
 ![alt text](image-3.png)
+
+# RDS vs Redshift 
+
+![alt text](image-4.png)
