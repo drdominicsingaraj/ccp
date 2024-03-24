@@ -38,4 +38,6 @@ These features combine to make AWS CloudFormation a powerful tool for managing A
 
 ![alt text](image-1.png)
 
+# Block Storage vs Object Storage 
 
+![alt text](image-3.png)
