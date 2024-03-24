@@ -30,6 +30,12 @@ These features combine to make AWS CloudFormation a powerful tool for managing A
 
 1 dzone.com 2 msp360.com 3 n2ws.com 4 dzone.com 5 flarecompare.com
 
+# S3 Storage Classes
+
+![alt text](image-2.png)
+
 # RDS vs Dynamo DB
 
 ![alt text](image-1.png)
+
+
