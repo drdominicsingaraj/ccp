@@ -45,3 +45,22 @@ These features combine to make AWS CloudFormation a powerful tool for managing A
 # RDS vs Redshift 
 
 ![alt text](image-4.png)
+
+# Amazon Machine Image
+
+An Amazon Machine Image (AMI) is a supported and maintained image provided by AWS that provides the information required to launch an instance. You must specify an AMI when you launch an instance. You can launch multiple instances from a single AMI when you require multiple instances with the same configuration. You can use different AMIs to launch instances when you require instances with different configurations.
+
+## An AMI includes the following:
+
+One or more Amazon Elastic Block Store (Amazon EBS) snapshots, or, for instance-store-backed AMIs, a template for the root volume of the instance (for example, an operating system, an application server, and applications).
+
+Launch permissions that control which AWS accounts can use the AMI to launch instances.
+
+A block device mapping that specifies the volumes to attach to the instance when it's launched.
+
+### Use an AMI
+
+The following diagram summarizes the AMI lifecycle. After you create and register an AMI, you can use it to launch new instances. (You can also launch instances from an AMI if the AMI owner grants you launch permissions.) You can copy an AMI within the same AWS Region or to different AWS Regions. When you no longer require an AMI, you can deregister it.
+
+![alt text](image-5.png)
+			
