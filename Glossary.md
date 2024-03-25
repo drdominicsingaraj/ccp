@@ -47,4 +47,4 @@ The following diagram summarizes the AMI lifecycle. After you create and registe
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
 
 # S3 storage classes 
-![alt text](image-7.png)
+![alt text](image-8.png)
