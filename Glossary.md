@@ -48,3 +48,6 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
 
 # S3 storage classes 
 ![alt text](image-8.png)
+
+# AWS Security Services
+![alt text](image-9.png)
