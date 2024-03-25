@@ -6,9 +6,18 @@
 
 ### Comparison table highlighting the key differences between AWS S3, EFS, EBS, and Instance Store:
 
-![alt text](image.png)
+| Feature | AWS S3 | AWS EFS | AWS EBS | Instance Store |
+|---------|--------|---------|---------|----------------|
+| **Type** | Object storage | File storage | Block storage | Temporary block-level storage |
+| **Use Case** | Web-based storage for large amounts of data, widely accessible | Shared file storage for use with AWS Cloud services and on-premises resources | High-performance block storage for use with EC2 and databases | Temporary storage of information that changes frequently, such as buffers, caches, scratch data, and other temporary content |
+| **Data Access** | Multiple systems or users concurrently | Multiple EC2 instances concurrently | Single EC2 instance at a time | Single EC2 instance at a time |
+| **Performance** | High throughput, low latency with S3 Transfer Acceleration | High throughput, low latency over NFS | High IOPS, low latency, provisioned IOPS for intensive workloads | Very high IOPS, low latency, ideal for high-speed local storage |
+| **Durability** | 99.999999999% (11 9's) | 99.999999999% (11 9's) | 99.999% | Data is lost if the instance is stopped or terminated |
+| **Availability** | Designed for 99.99% availability | Designed for 99.99% availability | 99.5% - 99.99% | Varies, as it is physically attached to the host computer |
+| **Scalability** | Virtually unlimited storage | Automatically scales with increasing files | Fixed size, but can be increased with some effort | Fixed size, tied to the instance |
+| **Pricing** | Pay for what you use, with additional cost for retrieval and requests | Pay for what you use, no additional cost for throughput or requests | Pay for provisioned storage, with additional cost for IOPS and throughput | Included in the cost of the EC2 instance |
+| **Data Persistence** | Persistent | Persistent | Persistent | Non-persistent |
 
-1 dzone.com 2 msp360.com 3 n2ws.com 4 dzone.com 5 flarecompare.com
 
 # S3 Storage Classes
 
@@ -50,7 +59,6 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
 ![alt text](image-8.png)
 
 # AWS Security Services
-![alt text](image-9.png)
 
 | Service | Description | Use Cases | Key Features |
 |---------|-------------|-----------|--------------|
