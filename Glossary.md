@@ -21,7 +21,25 @@
 
 # S3 Storage Classes
 
-![alt text](image-2.png)
+| Feature | S3 Standard | S3 Intelligent-Tiering | S3 Standard-IA | S3 One Zone-IA | S3 Glacier | S3 Glacier Deep Archive |
+|---------|-------------|------------------------|----------------|----------------|------------|-------------------------|
+| **Use Case** | General-purpose storage for frequently accessed data | Data with unknown or changing access patterns | Less frequently accessed data but needs to be readily available | Data that is infrequently accessed and can be stored in a single AZ | Long-term data archiving with occasional access | Long-term data archiving for rarely accessed data |
+| **Durability** | 99.999999999% | 99.999999999% | 99.999999999% | 99.999999999% | 99.999999999% | 99.999999999% |
+| **Availability Zones** | Multiple | Multiple | Multiple | Single | Multiple | Multiple |
+| **Minimum Storage Duration** | None | None | 30 days | 30 days | 90 days | 180 days |
+| **Minimum Billable Object Size** | None | None | 128KB | 128KB | 40KB | 40KB |
+| **Retrieval Fee** | None | None | Per GB retrieved | Per GB retrieved | Per GB retrieved | Per GB retrieved |
+| **First Byte Latency** | Milliseconds | Milliseconds | Milliseconds | Milliseconds | Minutes to hours | Hours |
+| **Data Resilience** | Stored redundantly across multiple devices in multiple facilities | Automatically moves data to the most cost-effective tier | Lower cost for infrequently accessed data | Lower cost option for infrequently accessed data not requiring multi-AZ resilience | Secure and durable storage for data archiving | Lowest cost storage for long-term archiving |
+| **Lifecycle Transition** | Supported | Supported | Supported | Supported | Supported | Supported |
+| **Versioning** | Supported | Supported | Supported | Supported | Supported | Supported |
+| **Event Notifications** | Supported | Supported | Supported | Supported | Supported | Supported |
+| **Resilient Against Disasters** | Yes | Yes | Yes | No (single AZ) | Yes | Yes |
+| **Data Encryption** | Supported | Supported | Supported | Supported | Supported | Supported |
+| **Access Control** | Fine-grained | Fine-grained | Fine-grained | Fine-grained | Fine-grained | Fine-grained |
+| **Monitoring and Logging** | Detailed | Detailed | Detailed | Detailed | Detailed | Detailed |
+| **Performance** | High throughput and low latency | Adapts based on access patterns | Lower throughput than Standard | Lower throughput than Standard | Lowest throughput | Lowest throughput |
+| **Pricing** | Higher cost for storage | Cost varies based on access | Lower storage cost than Standard | Lower storage cost than Standard and Standard-IA | Low storage cost with higher retrieval fees | Lowest storage cost with highest retrieval fees |
 
 # RDS vs Dynamo DB
 
