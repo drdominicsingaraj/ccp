@@ -75,6 +75,19 @@ The following diagram summarizes the AMI lifecycle. After you create and registe
 			
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
 
+# EC2 pricing options
+
+| Pricing Option | Description | Use Cases | Commitment | Savings Potential | Additional Points |
+|----------------|-------------|-----------|------------|-------------------|-------------------|
+| **On-Demand** | Pay for compute capacity by the hour or second with no long-term commitments. | Ideal for short-term, irregular workloads that cannot be interrupted. | None | None | Most flexible option, highest cost, instant availability. |
+| **Reserved Instances** | Reserve instances for a 1 or 3-year term and get a significant discount over On-Demand rates. | Best for steady-state usage and applications with predictable usage. | 1 or 3 years | Up to 75% | Options for partial, all upfront, or no upfront payment. |
+| **Savings Plans** | Commit to a consistent amount of usage (measured in $/hour) for a 1 or 3-year period and receive a lower rate. | Flexible usage across instance families and AWS regions. | 1 or 3 years | Up to 72% | Compute Savings Plans and EC2 Instance Savings Plans available. |
+| **Spot Instances** | Purchase unused EC2 capacity at a steep discount. Instances can be interrupted by AWS with two minutes of notification. | Suitable for flexible start and end times, fault-tolerant applications, and data analysis. | None | Up to 90% | Best for workloads with flexible timing, significant cost savings. |
+| **Dedicated Hosts** | Physical EC2 servers dedicated for your use which can help you meet compliance requirements. | Useful when you have server-bound software licenses that could complicate multi-tenant virtualization. | Per hour or reservation | Varies | Useful for regulatory or compliance needs, allows for existing license utilization. |
+| **Dedicated Instances** | Instances run on hardware that's dedicated to a single customer. | When you need to ensure your instances are physically isolated at the host hardware level from instances that belong to other AWS accounts. | Per hour | Varies | Physical isolation meets certain compliance requirements. |
+| **Capacity Reservations** | Reserve capacity for your EC2 instances in a specific Availability Zone for any duration. | When you need to ensure you have EC2 capacity when you need it, for as long as you need it. | None | Varies | Good for applications that require reserved capacity. |
+
+
 # AWS Security Services
 
 | Service | Description | Use Cases | Key Features |
