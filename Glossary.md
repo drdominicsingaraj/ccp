@@ -102,6 +102,45 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
 | **AWS Security Hub** | Centralized view of your security alerts and security posture across your AWS accounts. | Aggregated security findings, compliance checks, automated remediation. | Comprehensive security and compliance checks, automated response and remediation. |
 | **AWS Audit Manager** | Helps you continuously audit your AWS usage to simplify how you assess risk and compliance. | Audit evidence collection, compliance monitoring, audit preparation. | Prebuilt frameworks for compliance, automated evidence collection, continuous auditing. |
 
+# AWS Identity and Access Management (IAM)
+
+AWS IAM is a web service that helps you securely control access to AWS resources. You use IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources.
+
+## Key Features of AWS IAM
+
+- **Fine-Grained Access Control**: Manage permissions and control access to AWS services and resources with precision.
+
+- **Multi-Factor Authentication (MFA)**: Add an extra layer of security by enabling two-factor authentication for users.
+
+- **Identity Federation**: Allow users to authenticate with IAM using their existing corporate credentials.
+
+- **Roles and Policies**: Assign permissions to users, groups, and roles using policies written in JSON format.
+
+- **Temporary Security Credentials**: Provide temporary access to your AWS resources by using roles and federated users.
+
+- **Centralized Control**: Manage all user access and permissions from a single location within the AWS Management Console.
+
+- **Shared Access to Your AWS Account**: Delegate access to your AWS resources without sharing your AWS account credentials.
+
+- **Integrated with Many AWS Services**: Seamlessly integrated with other AWS services to control access to their resources.
+
+- **Supports PCI DSS Compliance**: IAM supports the processing, storage, and transmission of credit card data by a merchant or service provider, and is compliant with the Payment Card Industry Data Security Standard (PCI DSS).
+
+- **Customizable Password Policy**: Set custom password policies to manage password complexity and rotation requirements.
+
+- **AWS IAM Access Analyzer**: Analyze resource policies to help you determine which policies provide public or cross-account access.
+
+- **Service-Linked Roles**: Predefined roles that provide permissions for AWS services to access resources in other services on your behalf.
+
+- **Access Advisor**: View the service permissions granted to a user and when those services were last accessed.
+
+- **Policy Simulator**: Test and troubleshoot IAM and resource-based policies to ensure they grant the intended permissions.
+
+- **AWS Organizations Integration**: Centrally manage policies across multiple AWS accounts.
+
+For more detailed information and best practices, you can refer to the official [AWS IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
+
+
 # AWS CloudFormation
 
 AWS CloudFormation is an automated provisioning engine designed to deploy resources consistently and repeatably across various AWS services. It enables developers and system administrators to create and manage a collection of related AWS resources by provisioning and updating them in an orderly and predictable fashion.
