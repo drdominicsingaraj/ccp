@@ -41,17 +41,23 @@
 | **Performance** | High throughput and low latency | Adapts based on access patterns | Lower throughput than Standard | Lower throughput than Standard | Lowest throughput | Lowest throughput |
 | **Pricing** | Higher cost for storage | Cost varies based on access | Lower storage cost than Standard | Lower storage cost than Standard and Standard-IA | Low storage cost with higher retrieval fees | Lowest storage cost with highest retrieval fees |
 
-# RDS vs Dynamo DB
+# RDS vs Dynamo DB vs Redshift
 
-![alt text](image-1.png)
+| Feature | Amazon RDS | Amazon DynamoDB | Amazon Redshift |
+|---------|------------|-----------------|-----------------|
+| **Type** | Relational Database Service | NoSQL Database | Data Warehouse Service |
+| **Database Models** | SQL, MySQL, PostgreSQL, Oracle, MariaDB, and Aurora | Key-Value and Document Store | Column-oriented |
+| **Use Cases** | Traditional applications, ERP, CRM, e-commerce | High-traffic web apps, IoT, mobile apps, gaming | Business intelligence, data analysis, reporting |
+| **Performance** | High performance for transactional workloads | High performance, fast and consistent response times | Optimized for complex queries over large datasets |
+| **Storage** | Up to 64 TB | Unlimited | Up to 8 PB |
+| **Scaling** | Vertical scaling | Horizontal scaling, auto-scaling | Horizontal scaling |
+| **Data Replication** | Multi-AZ deployment for high availability | Multi-region, multi-master replication | Snapshot and restore to new clusters |
+| **Backup and Restore** | Automated backups, database snapshots | On-demand backup and restore, point-in-time recovery | Automated and manual snapshots |
+| **Security** | Encryption at rest and in transit, IAM for access control | Encryption at rest and in transit, fine-grained access control | Encryption at rest and in transit, VPC for network isolation |
+| **Pricing** | Pay for compute and storage resources | Pay for read/write throughput and storage | Pay for compute nodes and storage |
+| **Maintenance** | Managed maintenance and updates | Fully managed, no server management | Managed maintenance and updates |
+| **Integration** | Broad integration with AWS services | Integrates with other AWS services | Integrates with other AWS services, optimized for use with S3 |
 
-# Block Storage vs Object Storage 
-
-![alt text](image-3.png)
-
-# RDS vs Redshift 
-
-![alt text](image-4.png)
 
 # Amazon Machine Image
 
@@ -72,9 +78,6 @@ The following diagram summarizes the AMI lifecycle. After you create and registe
 ![alt text](image-5.png)
 			
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
-
-# S3 storage classes 
-![alt text](image-8.png)
 
 # AWS Security Services
 
