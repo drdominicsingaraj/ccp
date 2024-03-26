@@ -1,4 +1,6 @@
-# Storage
+# Glossary
+
+## Storage Services
 
 ### Comparison table highlighting the key differences between AWS S3, EFS, EBS, and Instance Store
 
@@ -14,8 +16,7 @@
 | **Pricing** | Pay for what you use, with additional cost for retrieval and requests | Pay for what you use, no additional cost for throughput or requests | Pay for provisioned storage, with additional cost for IOPS and throughput | Included in the cost of the EC2 instance |
 | **Data Persistence** | Persistent | Persistent | Persistent | Non-persistent |
 
-
-# S3 Storage Classes
+## S3 Storage Classes
 
 | Feature | S3 Standard | S3 Intelligent-Tiering | S3 Standard-IA | S3 One Zone-IA | S3 Glacier | S3 Glacier Deep Archive |
 |---------|-------------|------------------------|----------------|----------------|------------|-------------------------|
@@ -37,7 +38,7 @@
 | **Performance** | High throughput and low latency | Adapts based on access patterns | Lower throughput than Standard | Lower throughput than Standard | Lowest throughput | Lowest throughput |
 | **Pricing** | Higher cost for storage | Cost varies based on access | Lower storage cost than Standard | Lower storage cost than Standard and Standard-IA | Low storage cost with higher retrieval fees | Lowest storage cost with highest retrieval fees |
 
-# RDS vs Dynamo DB vs Redshift
+## RDS vs Dynamo DB vs Redshift
 
 | Feature | Amazon RDS | Amazon DynamoDB | Amazon Redshift |
 |---------|------------|-----------------|-----------------|
@@ -55,11 +56,11 @@
 | **Integration** | Broad integration with AWS services | Integrates with other AWS services | Integrates with other AWS services, optimized for use with S3 |
 
 
-# Amazon Machine Image
+## Amazon Machine Image
 
 An Amazon Machine Image (AMI) is a supported and maintained image provided by AWS that provides the information required to launch an instance. You must specify an AMI when you launch an instance. You can launch multiple instances from a single AMI when you require multiple instances with the same configuration. You can use different AMIs to launch instances when you require instances with different configurations.
 
-## An AMI includes the following:
+### An AMI includes the following
 
 One or more Amazon Elastic Block Store (Amazon EBS) snapshots, or, for instance-store-backed AMIs, a template for the root volume of the instance (for example, an operating system, an application server, and applications).
 
@@ -75,7 +76,7 @@ The following diagram summarizes the AMI lifecycle. After you create and registe
 			
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
 
-# EC2 pricing options
+## EC2 pricing options
 
 | Pricing Option | Description | Use Cases | Commitment | Savings Potential | Additional Points |
 |----------------|-------------|-----------|------------|-------------------|-------------------|
@@ -88,7 +89,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
 | **Capacity Reservations** | Reserve capacity for your EC2 instances in a specific Availability Zone for any duration. | When you need to ensure you have EC2 capacity when you need it, for as long as you need it. | None | Varies | Good for applications that require reserved capacity. |
 
 
-# AWS Security Services
+## AWS Security Services
 
 | Service | Description | Use Cases | Key Features |
 |---------|-------------|-----------|--------------|
@@ -102,11 +103,11 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
 | **AWS Security Hub** | Centralized view of your security alerts and security posture across your AWS accounts. | Aggregated security findings, compliance checks, automated remediation. | Comprehensive security and compliance checks, automated response and remediation. |
 | **AWS Audit Manager** | Helps you continuously audit your AWS usage to simplify how you assess risk and compliance. | Audit evidence collection, compliance monitoring, audit preparation. | Prebuilt frameworks for compliance, automated evidence collection, continuous auditing. |
 
-# AWS Identity and Access Management (IAM)
+## AWS Identity and Access Management (IAM)
 
 AWS IAM is a web service that helps you securely control access to AWS resources. You use IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources.
 
-## Key Features of AWS IAM
+### Key Features of AWS IAM
 
 - **Fine-Grained Access Control**: Manage permissions and control access to AWS services and resources with precision.
 
@@ -140,12 +141,11 @@ AWS IAM is a web service that helps you securely control access to AWS resources
 
 For more detailed information and best practices, you can refer to the official [AWS IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
 
-
-# AWS CloudFormation
+## AWS CloudFormation
 
 AWS CloudFormation is an automated provisioning engine designed to deploy resources consistently and repeatably across various AWS services. It enables developers and system administrators to create and manage a collection of related AWS resources by provisioning and updating them in an orderly and predictable fashion.
 
-## Key Benefits of AWS CloudFormation
+### Key Benefits of AWS CloudFormation
 
 - **Infrastructure as Code**: Manage and provision your infrastructure through text files which can be version controlled, shared, and reused.
 
@@ -199,7 +199,7 @@ AWS CloudFormation provides a robust solution for managing infrastructure, allow
 
 AWS offers a comprehensive set of machine learning services catering to various needs, from data scientists to developers and business analysts. Below is a summary of some key services:
 
-## Amazon SageMaker
+### Amazon SageMaker
 
 - **Description**: A fully managed service that enables data scientists and developers to quickly build, train, and deploy machine learning models.
 - **Key Features**:
@@ -208,7 +208,7 @@ AWS offers a comprehensive set of machine learning services catering to various 
   - One-click model deployment
   - Integrated Jupyter notebooks
 
-## Amazon Rekognition
+### Amazon Rekognition
 
 - **Description**: A service that makes it easy to add image and video analysis to your applications.
 - **Key Features**:
@@ -217,7 +217,7 @@ AWS offers a comprehensive set of machine learning services catering to various 
   - Unsafe content detection
   - Text in image recognition
 
-## Amazon Comprehend
+### Amazon Comprehend
 
 - **Description**: A natural language processing (NLP) service that uses machine learning to find insights and relationships in text.
 - **Key Features**:
@@ -226,7 +226,7 @@ AWS offers a comprehensive set of machine learning services catering to various 
   - Key phrase extraction
   - Language detection
 
-## Amazon Polly
+### Amazon Polly
 
 - **Description**: A service that turns text into lifelike speech, allowing you to create applications that talk.
 - **Key Features**:
@@ -234,7 +234,7 @@ AWS offers a comprehensive set of machine learning services catering to various 
   - Supports multiple languages and voices
   - Easy integration with other AWS services
 
-## Amazon Lex
+### Amazon Lex
 
 - **Description**: A service for building conversational interfaces into any application using voice and text.
 - **Key Features**:
@@ -242,7 +242,7 @@ AWS offers a comprehensive set of machine learning services catering to various 
   - Natural language understanding (NLU)
   - Integration with AWS Lambda for fulfilling functions
 
-## Amazon Translate
+### Amazon Translate
 
 - **Description**: A neural machine translation service that delivers fast, high-quality, and affordable language translation.
 - **Key Features**:
@@ -250,7 +250,7 @@ AWS offers a comprehensive set of machine learning services catering to various 
   - Support for multiple languages
   - Customizable translation
 
-## Amazon Textract
+### Amazon Textract
 
 - **Description**: A service that automatically extracts text and data from scanned documents.
 - **Key Features**:
