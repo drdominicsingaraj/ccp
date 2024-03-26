@@ -1,6 +1,6 @@
 # Storage
 
-### Comparison table highlighting the key differences between AWS S3, EFS, EBS, and Instance Store:
+### Comparison table highlighting the key differences between AWS S3, EFS, EBS, and Instance Store
 
 | Feature | AWS S3 | AWS EFS | AWS EBS | Instance Store |
 |---------|--------|---------|---------|----------------|
@@ -195,3 +195,65 @@ AWS CloudFormation provides a robust solution for managing infrastructure, allow
 | **Ordering** | Standard and FIFO (First-In-First-Out) queues | Standard topics for unordered, FIFO for ordered delivery | N/A |
 | **Data Protection** | Encryption at rest, message retention policies | Data masking, encryption in transit, and at rest | Content filtering, dedicated IP addresses |
 
+## AWS Machine Learning Services
+
+AWS offers a comprehensive set of machine learning services catering to various needs, from data scientists to developers and business analysts. Below is a summary of some key services:
+
+## Amazon SageMaker
+
+- **Description**: A fully managed service that enables data scientists and developers to quickly build, train, and deploy machine learning models.
+- **Key Features**:
+  - End-to-end machine learning workflow
+  - Broad framework support
+  - One-click model deployment
+  - Integrated Jupyter notebooks
+
+## Amazon Rekognition
+
+- **Description**: A service that makes it easy to add image and video analysis to your applications.
+- **Key Features**:
+  - Object and scene detection
+  - Facial recognition and analysis
+  - Unsafe content detection
+  - Text in image recognition
+
+## Amazon Comprehend
+
+- **Description**: A natural language processing (NLP) service that uses machine learning to find insights and relationships in text.
+- **Key Features**:
+  - Sentiment analysis
+  - Entity recognition
+  - Key phrase extraction
+  - Language detection
+
+## Amazon Polly
+
+- **Description**: A service that turns text into lifelike speech, allowing you to create applications that talk.
+- **Key Features**:
+  - Lifelike speech synthesis
+  - Supports multiple languages and voices
+  - Easy integration with other AWS services
+
+## Amazon Lex
+
+- **Description**: A service for building conversational interfaces into any application using voice and text.
+- **Key Features**:
+  - Automatic speech recognition (ASR)
+  - Natural language understanding (NLU)
+  - Integration with AWS Lambda for fulfilling functions
+
+## Amazon Translate
+
+- **Description**: A neural machine translation service that delivers fast, high-quality, and affordable language translation.
+- **Key Features**:
+  - Real-time translation
+  - Support for multiple languages
+  - Customizable translation
+
+## Amazon Textract
+
+- **Description**: A service that automatically extracts text and data from scanned documents.
+- **Key Features**:
+  - Extracts text, forms, and tables
+  - Machine learning-based document analysis
+  - Easy integration with other AWS services
