@@ -285,13 +285,13 @@ AWS Auto Scaling ensures that you have the correct number of Amazon EC2 instance
 - **Cost-Effective**: Reduces costs by terminating unnecessary instances and launching new ones when needed.
 - **Integrated with AWS Services**: Works with services like EC2, ECS, RDS, and DynamoDB.
 
-## How It Works
+### How It Works
 
 1. **Define Scaling Policies**: Set parameters based on desired, minimum, and maximum number of instances.
 2. **Monitor Application Demand**: Use Amazon CloudWatch to monitor traffic and trigger scaling actions.
 3. **Automatic Scaling**: Instances are automatically added or removed according to policies and demand.
 
-## Benefits
+### Benefits
 
 - **Improved Availability**: Maintains application performance during demand spikes.
 - **Cost Savings**: Only use and pay for the resources you need.
@@ -315,3 +315,19 @@ AWS Route 53 is a scalable and highly available Domain Name System (DNS) web ser
 - **Web Application Hosting**: Reliable and cost-effective way to route visitors to your web applications.
 - **Global Server Load Balancing**: Route traffic to multiple endpoints worldwide, which can be in AWS or outside of AWS.
 - **Disaster Recovery**: Set up DNS health checks and failover to reroute your users to a standby web environment in case your primary web application becomes unavailable.
+
+## AWS CloudWatch vs CloudTrail
+
+AWS CloudWatch is focused on the operational aspects, such as performance and health of AWS services, while CloudTrail is focused on the compliance and governance aspects, tracking the API calls and activities within your AWS account
+
+| Feature | AWS CloudWatch | AWS CloudTrail |
+|---------|----------------|----------------|
+| **Purpose** | Monitors AWS resources and applications, providing operational data and insights. | Records AWS account activity, providing logs for security and compliance auditing. |
+| **Primary Use** | Real-time monitoring of metrics and logs for performance and health of AWS services. | Tracking user activity and API usage to ensure governance and compliance. |
+| **Data Provided** | Metrics, logs, alarms, and events related to AWS resources and applications. | API call history, including who made the call, from where, and when. |
+| **Functionality** | Offers dashboards, alarms, and insights for resource optimization. | Provides event history for auditing and operational troubleshooting. |
+| **Integration** | Integrates with AWS services for monitoring and operational management. | Integrates with AWS services for governance, compliance, and risk auditing. |
+| **Data Availability** | Metric data is available in 1-minute periods for detailed monitoring. | Event data is delivered within 15 minutes of the API call. |
+| **Storage** | Stores data in CloudWatch dashboards as metrics and logs. | Centralizes logs across regions/accounts and stores them in S3 buckets. |
+| **Pricing** | Free basic monitoring; charges apply for detailed monitoring and additional features. | Free for basic event history; charges apply for extended history and log delivery to S3. |
+| **Common Users** | Developers, IT operators, and system administrators. | Security and compliance teams, auditors, and IT administrators. |
