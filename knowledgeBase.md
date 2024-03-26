@@ -34,25 +34,18 @@ The `terraform fmt` command is used to rewrite Terraform configuration files to 
 
 Here's an example of how you might use the `terraform fmt` command with the `-diff` option:
 
-terraform fmt -diff
+`terraform fmt -diff`
 
 This command will show you a side-by-side comparison of the original code and the formatted code, highlighting the changes made by the formatter.
 
 For instance, if you had a configuration file with the following content:
 
-resource "aws_instance" "example" {
-  ami           = "abc123"
-  instance_type = "t2.micro"
-}
-
-After running terraform fmt -diff, you might see output like this:
-
-
-resource "aws_instance" "example" {
--  ami           = "abc123"
--  instance_type = "t2.micro"
-+  ami                    = "abc123"
-+  instance_type          = "t2.micro"
-}
+![alt text](image-2.png)
 
 The - indicates lines that will be removed, and the + indicates lines that will be added, showing you exactly how the indentation and alignment will change to match the canonical format.
+
+## Issue 2
+
+Amazon VPC Peering Network Connectivity Issues
+
+[![Amazon VPC Peering Network Connectivity Issues](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDLB2yNDyFmM)](https://www.youtube.com/watch?v=DLB2yNDyFmM)
