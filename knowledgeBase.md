@@ -66,4 +66,6 @@ The - indicates lines that will be removed, and the + indicates lines that will 
 For a comprehensive guide on resolving Amazon VPC peering network connectivity issues, watch the following video:
 
 Amazon VPC Peering Network Connectivity Issues
-!https://www.youtube.com/watch?v=DLB2yNDyFmM
+!
+
+[![Watch the video]](https://www.youtube.com/watch?v=DLB2yNDyFmM)
