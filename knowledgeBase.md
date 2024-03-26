@@ -58,3 +58,11 @@ resource "aws_instance" "example" {
 }
 
 The - indicates lines that will be removed, and the + indicates lines that will be added, showing you exactly how the indentation and alignment will change to match the canonical format.
+
+## Issue 2
+
+**How do I resolve Amazon VPC peering network connectivity issues?**
+
+For a comprehensive guide on resolving Amazon VPC peering network connectivity issues, watch the following video:
+
+!Amazon VPC Peering Network Connectivity Issues
