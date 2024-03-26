@@ -44,8 +44,6 @@ For instance, if you had a configuration file with the following content:
 
 The - indicates lines that will be removed, and the + indicates lines that will be added, showing you exactly how the indentation and alignment will change to match the canonical format.
 
-## Issue 2
-
-Amazon VPC Peering Network Connectivity Issues
+## Amazon VPC Peering Network Connectivity Issues
 
 [![Amazon VPC Peering Network Connectivity Issues](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDLB2yNDyFmM)](https://www.youtube.com/watch?v=DLB2yNDyFmM)
