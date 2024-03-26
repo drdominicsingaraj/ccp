@@ -7,7 +7,7 @@ Encountered issues while running the `terraform init` command in the local machi
 
 **Solution:**
 
-There were issues fetching latest AMI Id due to Indentation issues in the terraform configuration file. 
+There were issues fetching latest AMI Id due to Indentation issues in the terraform configuration file.
 
 ### Select the newest AMI
 
