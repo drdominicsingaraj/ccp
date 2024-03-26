@@ -11,12 +11,4 @@ There were issues fetching latest AMI Id due to Indentation issues in the terraf
 
 ### Select the newest AMI
 
-data "aws_ami" "latest_linux_ami" {
-  most_recent = true
-  owners      = ["amazon"]
-
-  filter {
-    name   = "name"
-    values = ["al2023-ami-2023*x86_64"]
-  }
-}
+![alt text](image-1.png)
