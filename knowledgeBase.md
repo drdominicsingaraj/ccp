@@ -34,9 +34,7 @@ The `terraform fmt` command is used to rewrite Terraform configuration files to 
 
 Here's an example of how you might use the `terraform fmt` command with the `-diff` option:
 
-```shell
 terraform fmt -diff
-
 
 This command will show you a side-by-side comparison of the original code and the formatted code, highlighting the changes made by the formatter.
 
@@ -58,13 +56,3 @@ resource "aws_instance" "example" {
 }
 
 The - indicates lines that will be removed, and the + indicates lines that will be added, showing you exactly how the indentation and alignment will change to match the canonical format.
-
-## Issue 2
-
-**How do I resolve Amazon VPC peering network connectivity issues?**
-
-For a comprehensive guide on resolving Amazon VPC peering network connectivity issues, watch the following video:
-
-Amazon VPC Peering Network Connectivity Issues
-
-[![Amazon VPC Peering Network Connectivity Issues](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDLB2yNDyFmM)](https://www.youtube.com/watch?v=DLB2yNDyFmM)
