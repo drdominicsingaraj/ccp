@@ -67,8 +67,4 @@ For a comprehensive guide on resolving Amazon VPC peering network connectivity i
 
 Amazon VPC Peering Network Connectivity Issues
 
-[![Watch the video]](https://www.youtube.com/watch?v=DLB2yNDyFmM)
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=nTQUwghvy5Q" target="_blank">
- <img src="http://img.youtube.com/vi/nTQUwghvy5Q/mqdefault.jpg" alt="Watch the video" width="240" height="180" border="10" />
-</a>
+[![Amazon VPC Peering Network Connectivity Issues](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDLB2yNDyFmM)](https://www.youtube.com/watch?v=DLB2yNDyFmM)
