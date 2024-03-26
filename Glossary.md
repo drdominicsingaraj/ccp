@@ -183,8 +183,15 @@ AWS CloudFormation provides a robust solution for managing infrastructure, allow
 
 ## SQS vs SNS vs SES
 
-| Service | Type | Use Case | Delivery | Persistence | Scalability | Reliability | Communication | Ordering | Data Protection |
-|---------|------|----------|----------|-------------|-------------|-------------|---------------|----------|-----------------|
-| **SQS (Simple Queue Service)** | Message queuing service | Decouples components of a distributed system | Messages are pulled by the receiver | Messages are stored until they're processed | Can handle a high number of messages | Guarantees delivery of each message at least once | A2A (Application to Application) | Standard and FIFO (First-In-First-Out) queues | Encryption at rest, message retention policies |
-| **SNS (Simple Notification Service)** | Pub/sub messaging service | Sends messages to multiple subscribers | Pushes messages to subscribers | No message storage for retrieval, but retains messages for a short period for delivery retries | Supports a large number of subscribers | Delivers messages to all active subscribers | A2A and A2P (Application to Person) | Standard topics for unordered, FIFO for ordered delivery | Data masking, encryption in transit, and at rest |
-| **SES (Simple Email Service)** | Email sending service | Sends transactional and marketing emails | Directly to email recipients | No storage, emails are sent and then deleted | Designed for high-volume email delivery | High deliverability with content filtering | A2P | N/A | Content filtering, dedicated IP addresses |
+| Feature | SQS (Simple Queue Service) | SNS (Simple Notification Service) | SES (Simple Email Service) |
+|---------|----------------------------|----------------------------------|----------------------------|
+| **Type** | Message queuing service | Pub/sub messaging service | Email sending service |
+| **Use Case** | Decouples components of a distributed system | Sends messages to multiple subscribers | Sends transactional and marketing emails |
+| **Delivery** | Messages are pulled by the receiver | Pushes messages to subscribers | Directly to email recipients |
+| **Persistence** | Messages are stored until they're processed | No message storage for retrieval, but retains messages for a short period for delivery retries | No storage, emails are sent and then deleted |
+| **Scalability** | Can handle a high number of messages | Supports a large number of subscribers | Designed for high-volume email delivery |
+| **Reliability** | Guarantees delivery of each message at least once | Delivers messages to all active subscribers | High deliverability with content filtering |
+| **Communication** | A2A (Application to Application) | A2A and A2P (Application to Person) | A2P |
+| **Ordering** | Standard and FIFO (First-In-First-Out) queues | Standard topics for unordered, FIFO for ordered delivery | N/A |
+| **Data Protection** | Encryption at rest, message retention policies | Data masking, encryption in transit, and at rest | Content filtering, dedicated IP addresses |
+
