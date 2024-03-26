@@ -257,3 +257,61 @@ AWS offers a comprehensive set of machine learning services catering to various 
   - Extracts text, forms, and tables
   - Machine learning-based document analysis
   - Easy integration with other AWS services
+
+## AWS Elastic Load Balancing (ELB)
+
+AWS Elastic Load Balancing (ELB) automatically distributes incoming application traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones. It ensures high availability and fault tolerance for your applications.
+
+### Key Features
+
+- **Automatic Distribution**: Distributes incoming traffic across multiple targets in different Availability Zones.
+- **Health Checks**: Monitors the health of registered targets and routes traffic only to healthy ones.
+- **Scalability**: Scales the load balancer capacity automatically in response to incoming traffic changes.
+- **Types of Load Balancers**:
+  - **Application Load Balancer**: Best suited for HTTP and HTTPS traffic, providing advanced request routing.
+  - **Network Load Balancer**: Ideal for TCP, UDP, and TLS traffic where performance is required.
+  - **Gateway Load Balancer**: Simplifies the deployment of third-party virtual appliances.
+  - **Classic Load Balancer**: Provides basic load balancing across multiple EC2 instances.
+
+## AWS Auto Scaling
+
+AWS Auto Scaling ensures that you have the correct number of Amazon EC2 instances available to handle the load for your application. It can automatically increase or decrease resource capacity in response to changing demand.
+
+### Auto-Scaling Key Features
+
+- **Dynamic Scaling**: Adjusts the number of EC2 instances in response to real-time demand metrics.
+- **Predictive Scaling**: Uses machine learning to schedule the right number of EC2 instances based on predicted demand.
+- **Health Checks**: Automatically replaces instances that fail health checks.
+- **Cost-Effective**: Reduces costs by terminating unnecessary instances and launching new ones when needed.
+- **Integrated with AWS Services**: Works with services like EC2, ECS, RDS, and DynamoDB.
+
+## How It Works
+
+1. **Define Scaling Policies**: Set parameters based on desired, minimum, and maximum number of instances.
+2. **Monitor Application Demand**: Use Amazon CloudWatch to monitor traffic and trigger scaling actions.
+3. **Automatic Scaling**: Instances are automatically added or removed according to policies and demand.
+
+## Benefits
+
+- **Improved Availability**: Maintains application performance during demand spikes.
+- **Cost Savings**: Only use and pay for the resources you need.
+- **Time-Saving**: Automates the scaling process, freeing up time for other tasks.
+
+## AWS Route 53
+
+AWS Route 53 is a scalable and highly available Domain Name System (DNS) web service. It is designed to give developers and businesses an extremely reliable and cost-effective way to route end users to Internet applications.
+
+### Route 53 Key Features
+
+- **DNS Service**: Route 53 translates friendly domain names like www.example.com into IP addresses like 192.0.2.1.
+- **Health Checking**: Automatically sends requests to endpoints to verify they are reachable, available, and functional.
+- **Traffic Flow**: Manages traffic globally through a variety of routing types, including latency-based routing, Geo DNS, and Weighted Round Robin—all of which can be combined with DNS Failover to enable a variety of low-latency, fault-tolerant architectures.
+- **Domain Registration**: Helps you purchase and manage domain names such as .com, .net, and .org.
+- **SSL Certificate Management**: Integrates with AWS Certificate Manager for easy management and deployment of SSL/TLS certificates.
+- **Private DNS for Amazon VPC**: Manages custom domain names for your AWS resources using private DNS within your Virtual Private Cloud (VPC).
+
+### Use Cases
+
+- **Web Application Hosting**: Reliable and cost-effective way to route visitors to your web applications.
+- **Global Server Load Balancing**: Route traffic to multiple endpoints worldwide, which can be in AWS or outside of AWS.
+- **Disaster Recovery**: Set up DNS health checks and failover to reroute your users to a standby web environment in case your primary web application becomes unavailable.
