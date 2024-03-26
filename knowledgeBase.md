@@ -27,3 +27,34 @@ You can use `terraform fmt` with the following options:
 - `-check`: Check if the input is formatted. Exit status will be 0 if all input is properly formatted.
 
 By default, it scans the current directory for configuration files. You can specify a target directory or file.
+
+**Example of `terraform fmt -diff` Output:**
+
+The `terraform fmt` command is used to rewrite Terraform configuration files to a canonical format and style. When you use the `-diff` option with this command, it displays the differences between the original and formatted code.
+
+Here's an example of how you might use the `terraform fmt` command with the `-diff` option:
+
+```shell
+terraform fmt -diff
+
+
+This command will show you a side-by-side comparison of the original code and the formatted code, highlighting the changes made by the formatter.
+
+For instance, if you had a configuration file with the following content:
+
+resource "aws_instance" "example" {
+  ami           = "abc123"
+  instance_type = "t2.micro"
+}
+
+After running terraform fmt -diff, you might see output like this:
+
+
+resource "aws_instance" "example" {
+-  ami           = "abc123"
+-  instance_type = "t2.micro"
++  ami                    = "abc123"
++  instance_type          = "t2.micro"
+}
+
+The - indicates lines that will be removed, and the + indicates lines that will be added, showing you exactly how the indentation and alignment will change to match the canonical format.
