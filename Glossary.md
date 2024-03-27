@@ -73,8 +73,7 @@ A block device mapping that specifies the volumes to attach to the instance when
 The following diagram summarizes the AMI lifecycle. After you create and register an AMI, you can use it to launch new instances. (You can also launch instances from an AMI if the AMI owner grants you launch permissions.) You can copy an AMI within the same AWS Region or to different AWS Regions. When you no longer require an AMI, you can deregister it.
 
 ![alt text](image-5.png)
-			
-https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
+<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html>
 
 ## EC2 pricing options
 
@@ -88,23 +87,23 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
 | **Dedicated Instances** | Instances run on hardware that's dedicated to a single customer. | When you need to ensure your instances are physically isolated at the host hardware level from instances that belong to other AWS accounts. | Per hour | Varies | Physical isolation meets certain compliance requirements. |
 | **Capacity Reservations** | Reserve capacity for your EC2 instances in a specific Availability Zone for any duration. | When you need to ensure you have EC2 capacity when you need it, for as long as you need it. | None | Varies | Good for applications that require reserved capacity. |
 
-## Amazon EC2 Instance Types: Detailed Comparison
+## Detailed Amazon EC2 Instance Types Comparison
 
-| Instance Type | Use Case | CPU | Memory | Storage | Networking | Additional Features | Suitable Workloads |
-|---------------|----------|-----|--------|---------|------------|---------------------|--------------------|
-| **General Purpose** | Balanced workloads | Variable | Variable | EBS only | Up to 25 Gbps | Balance of compute, memory, and networking resources | Web servers, code repositories |
-| **Compute Optimized** | Compute-intensive | High | Moderate | EBS only | Up to 100 Gbps | High CPU performance for batch processing, ad serving | High-performance web servers, scientific modeling |
-| **Memory Optimized** | Memory-intensive | Moderate | High | EBS only | Up to 100 Gbps | Fast performance for large in-memory databases | Real-time big data analytics, HPC |
-| **Storage Optimized** | Storage-intensive | High | High | SSD/HDD | Up to 100 Gbps | High sequential read/write access | NoSQL databases, data warehousing |
-| **Accelerated Computing** | Graphics/ML tasks | Variable | High | EBS only | Up to 100 Gbps | Hardware accelerators for floating-point calculations, graphics processing | Machine learning, 3D visualization |
-| **High Performance Computing** | HPC applications | Very High | High | EBS only | Up to 400 Gbps | Complex scientific, engineering, business applications | Genomics, computational chemistry |
+| Category | Instance Type | Suitable For | vCPUs | RAM | Storage | Network Performance | Additional Features |
+|----------|---------------|--------------|-------|-----|---------|---------------------|---------------------|
+| General Purpose | T2/T3/T4g, M5/M6g | Various workloads with balanced needs | Variable | Variable | EBS only | Up to 25 Gbps | Cost-effective, good for small to medium databases |
+| Compute Optimized | C5/C6g | High-performance computing, batch processing | High | Moderate | EBS only | Up to 100 Gbps | High CPU performance, good for CPU-bound applications |
+| Memory Optimized | R5/R6g | Large databases, memory-intensive applications | Moderate | High | EBS only | Up to 100 Gbps | Fast performance for large in-memory processing |
+| Storage Optimized | I3/I3en | High frequency, I/O intensive apps, large databases | High | High | SSD/HDD | Up to 100 Gbps | High random I/O access, high sequential read/write |
+| Accelerated Computing | P3/P4 | Machine learning, graphics-intensive applications | Variable | High | EBS only | Up to 100 Gbps | NVIDIA GPUs, high-performance computing |
+| High Performance Computing | HPC6id | Scientific modeling, engineering applications | Very High | High | EBS only | Up to 400 Gbps | Low latency networking, high network throughput |
 
-## Additional Considerations
+### Additional Considerations
 
-- **Pricing**: Reserved Instances can provide a significant discount compared to On-Demand pricing, depending on the term and payment options.
-- **Flexibility**: Spot Instances allow you to take advantage of unused EC2 capacity at a potentially lower cost.
-- **Scalability**: Auto Scaling ensures you have the correct number of EC2 instances available to handle your application's load.
-- **Security**: Amazon VPC lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.
+- **Pricing**: Costs can vary significantly between instance types and sizes, and also depend on the chosen pricing model (On-Demand, Reserved, Spot Instances).
+- **Scalability**: Some instance types offer auto-scaling features, allowing you to adjust resources based on demand.
+- **Security**: All instance types can be launched within an Amazon VPC, providing a secure and isolated environment.
+- **Flexibility**: With the option to change instance types and sizes, you can optimize costs and performance as your needs evolve.
 
 ## AWS Reserved Instances Types Comparison
 
