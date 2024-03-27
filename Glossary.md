@@ -11,6 +11,7 @@
 Each cloud service model offers different levels of control, flexibility, and management, which can be selected based on the needs of the business or application. IaaS provides the most control but requires more management, PaaS eases the management burden but offers less control, and SaaS offers the least control but is the easiest to use and set up.
 
 ![Pizza as a Service Analogy](image-4.png)
+
 [Pizza as a Service 2.0](https://engineering.dunelm.com/pizza-as-a-model-453b838ca165)
 
 ## Shared Responsibility Model
@@ -57,6 +58,28 @@ Each cloud service model offers different levels of control, flexibility, and ma
 | **Performance** | High throughput and low latency | Adapts based on access patterns | Lower throughput than Standard | Lower throughput than Standard | Lowest throughput | Lowest throughput |
 | **Pricing** | Higher cost for storage | Cost varies based on access | Lower storage cost than Standard | Lower storage cost than Standard and Standard-IA | Low storage cost with higher retrieval fees | Lowest storage cost with highest retrieval fees |
 
+## AWS Virtual Private Cloud (VPC) and Related Components
+
+| Component | Description | Additional Points |
+|-----------|-------------|-------------------|
+| **VPC** | A virtual network dedicated to your AWS account within the AWS Cloud. | Supports both IPv4 and IPv6 addressing. |
+| **Subnets** | Subdivisions of your VPC where you can launch AWS resources. | Can be public or private, depending on the route table and network gateway associations. |
+| **Route Tables** | Define rules, known as routes, that determine where network traffic from your subnets or gateways is directed. | Each subnet must be associated with a route table, which can be shared. |
+| **Internet Gateways** | Connects your VPC to the internet and to other AWS services. | Enables communication between instances in your VPC and the internet. |
+| **NAT Gateways** | Enable instances in a private subnet to connect to the internet or other AWS services but prevent the internet from initiating connections with the instances. | Provides a mechanism for instances in a private subnet to send outbound traffic. |
+| **Security Groups** | Act as a virtual firewall for your instances to control inbound and outbound traffic. | Operates at the instance level and supports allow rules only. |
+| **Network ACLs** | Provide a layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets. | Operates at the subnet level and supports both allow and deny rules. |
+| **VPC Endpoints** | Enable private connections between your VPC and supported AWS services and VPC endpoint services powered by AWS PrivateLink. | Eliminates the need to use an Internet Gateway, NAT device, VPN connection, or AWS Direct Connect connection to communicate with AWS services. |
+| **Elastic IP Addresses** | Static IPv4 addresses for dynamic cloud computing. | Can be associated with instances or network interfaces. |
+| **Elastic Network Interfaces (ENIs)** | Virtual network interfaces that you can attach to instances in your VPC. | Can include primary and secondary private IP addresses, Elastic IP addresses, and security groups. |
+| **VPC Peering** | Allows you to connect one VPC with another via a direct network route using private IP addresses. | Traffic between peered VPCs remains private and does not traverse the public internet. |
+| **Transit Gateway** | Enables you to connect your VPCs and on-premises networks through a central hub. | Simplifies network architecture and reduces operational overhead. |
+| **VPC Flow Logs** | Capture information about the IP traffic going to and from network interfaces in your VPC. | Helps monitor and troubleshoot connectivity issues[^1^][3]. |
+| **Traffic Mirroring** | Copy network traffic from network interfaces and send it to security and monitoring appliances for deep packet inspection. | Useful for content inspection and threat monitoring[^1^][3]. |
+| **VPN Connections** | Connect your VPCs to your on-premises networks using AWS Virtual Private Network (AWS VPN). | Provides secure and private sessions with IP Security (IPSec) and Transport Layer Security (TLS)[^1^][3]. |
+
+For more detailed information on AWS VPC and its components, you can refer to the [AWS VPC User Guide](https://docs.aws.amazon.com/vpc/latest/userguide/how-it-works.html) and [What is Amazon VPC?](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) provided by AWS.
+
 ## RDS vs Dynamo DB vs Redshift
 
 | Feature | Amazon RDS | Amazon DynamoDB | Amazon Redshift |
@@ -73,7 +96,6 @@ Each cloud service model offers different levels of control, flexibility, and ma
 | **Pricing** | Pay for compute and storage resources | Pay for read/write throughput and storage | Pay for compute nodes and storage |
 | **Maintenance** | Managed maintenance and updates | Fully managed, no server management | Managed maintenance and updates |
 | **Integration** | Broad integration with AWS services | Integrates with other AWS services | Integrates with other AWS services, optimized for use with S3 |
-
 
 ## Amazon Machine Image
 
