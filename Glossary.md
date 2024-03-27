@@ -648,7 +648,7 @@ AWS Trusted Advisor is an online resource that helps you optimize your AWS envir
 - **Resilience Enhancement**: Examines the environment for redundancy shortfalls and suggests improvements.
 - **Service Limits Tracking**: Monitors usage and notifies when approaching or exceeding service limits.
 
-## Access and Support Plans
+### Access and Support Plans
 
 - **Basic and Developer Support Plans**: Limited access to checks.
 - **Business and Enterprise Support Plans**: Full access to all checks, Trusted Advisor Priority, and API access.
@@ -682,3 +682,45 @@ AWS Systems Manager enables visibility and control of your infrastructure on AWS
 | **Inventory Management** | Collect software inventory and use it for operational tasks and compliance. |
 | **Maintenance Windows** | Schedule maintenance windows for performing potentially disruptive actions. |
 | **Document Builder** | Use Document Builder to create runbooks with automation actions without needing JSON or YAML syntax. |
+
+## AWS X-Ray
+
+AWS X-Ray helps developers analyze and debug distributed applications, such as those built using a microservices architecture. With X-Ray, you can understand how your application and its underlying services are performing to identify and troubleshoot the root cause of performance issues and errors.
+
+### Features
+
+- **Request Tracing**: Follows the path of a request through your application, providing end-to-end visibility.
+- **Service Map**: Visualizes your application’s components and the connections between them.
+- **Filter Expressions**: Allows you to filter traces and identify trends and issues.
+- **Annotations and Metadata**: Add custom data to traces to provide additional context.
+- **Error, Fault, and Exception Tracking**: Identifies requests that result in an error, fault, or exception.
+- **Integration with AWS Services**: Works with Amazon EC2, AWS Lambda, Amazon API Gateway, and more.
+
+For detailed documentation on AWS X-Ray, including how to get started and instrument your applications, visit the [AWS X-Ray Documentation](https://docs.aws.amazon.com/xray/).
+
+## Tracing AWS Lambda Functions with AWS X-Ray
+
+### Steps to Enable X-Ray Tracing for Lambda
+
+1. **Enable X-Ray Tracing in Lambda**:
+   - Navigate to the AWS Lambda console and select your function.
+   - Click on the **Configuration** tab.
+   - Under **Monitoring and operations tools**, choose **Edit**.
+   - Enable **Active tracing** under the AWS X-Ray section.
+   - Save the changes to enable tracing.
+
+2. **Set IAM Permissions**:
+   - Ensure the Lambda function's execution role has the `AWSRayDaemonWriteAccess` policy attached to upload trace data to X-Ray.
+
+3. **Instrument Your Code** (Optional):
+   - Include the AWS X-Ray SDK in your Lambda function code for advanced instrumentation.
+   - Use the SDK to record outgoing calls, add annotations, or capture additional metadata.
+
+4. **View Traces**:
+   - After invoking your function, go to the AWS X-Ray console to view the service map and traces.
+   - Analyze the data to understand application performance and pinpoint issues.
+
+### AWS X-Ray Best Practices
+
+- AWS X-Ray applies a sampling algorithm to balance the amount of trace data recorded with the cost of recording traces.
+- For detailed guidance, refer to the AWS documentation on [Using AWS Lambda with AWS X-Ray] and [AWS Lambda and AWS X-Ray].
