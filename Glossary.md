@@ -88,6 +88,17 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
 | **Dedicated Instances** | Instances run on hardware that's dedicated to a single customer. | When you need to ensure your instances are physically isolated at the host hardware level from instances that belong to other AWS accounts. | Per hour | Varies | Physical isolation meets certain compliance requirements. |
 | **Capacity Reservations** | Reserve capacity for your EC2 instances in a specific Availability Zone for any duration. | When you need to ensure you have EC2 capacity when you need it, for as long as you need it. | None | Varies | Good for applications that require reserved capacity. |
 
+## AWS Reserved Instances Types Comparison
+
+| Feature | Standard Reserved Instance | Convertible Reserved Instance | Scheduled Reserved Instance |
+|---------|----------------------------|-------------------------------|-----------------------------|
+| **Discount Level** | Highest discount rates | Lower discount rates compared to Standard | Moderate discount rates |
+| **Term Flexibility** | 1 or 3 years | 1 or 3 years | Customizable within the term |
+| **Modification** | Limited modification options | More flexible modifications | Limited to the schedule |
+| **Exchangeability** | Not exchangeable | Exchangeable for other Convertible Reserved Instances | Not exchangeable |
+| **Marketplace** | Can be sold in the Reserved Instance Marketplace | Cannot be sold | Cannot be sold |
+| **Capacity Reservation** | Guaranteed capacity reservation | Optional capacity reservation | Guaranteed capacity reservation for the scheduled time |
+| **Use Case** | Best for stable workloads with predictable usage | Suitable for changing workloads or instance types | Ideal for workloads with a known schedule |
 
 ## AWS Security Services
 
@@ -361,3 +372,5 @@ AWS Organizations is an AWS service designed for account management, enabling yo
 2. **Invite Accounts**: Add existing AWS accounts or create new ones within your organization.
 3. **Set Up OUs**: Organize your accounts into OUs and assign relevant policies.
 4. **Apply SCPs**: Define and apply SCPs to manage permissions and maintain security standards.
+
+
