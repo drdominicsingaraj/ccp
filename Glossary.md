@@ -724,3 +724,6 @@ For detailed documentation on AWS X-Ray, including how to get started and instru
 
 - AWS X-Ray applies a sampling algorithm to balance the amount of trace data recorded with the cost of recording traces.
 - For detailed guidance, refer to the AWS documentation on [Using AWS Lambda with AWS X-Ray] and [AWS Lambda and AWS X-Ray].
+
+Sample:
+![alt text](image-8.png)
