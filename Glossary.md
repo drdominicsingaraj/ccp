@@ -390,6 +390,8 @@ AWS Organizations is an AWS service designed for account management, enabling yo
 3. **Set Up OUs**: Organize your accounts into OUs and assign relevant policies.
 4. **Apply SCPs**: Define and apply SCPs to manage permissions and maintain security standards.
 
+![AWS Organizations](https://docs.aws.amazon.com/organizations/)
+
 ## AWS Well-Architected Framework
 
 The AWS Well-Architected Framework is a guide for building and operating secure, efficient, and resilient systems in the cloud. It provides a set of best practices and a consistent approach for evaluating architectures.
