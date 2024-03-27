@@ -390,7 +390,7 @@ AWS Organizations is an AWS service designed for account management, enabling yo
 3. **Set Up OUs**: Organize your accounts into OUs and assign relevant policies.
 4. **Apply SCPs**: Define and apply SCPs to manage permissions and maintain security standards.
 
-![AWS Organizations](https://docs.aws.amazon.com/organizations/)
+![alt text](image-3.png)
 
 ## AWS Well-Architected Framework
 
