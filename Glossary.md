@@ -331,3 +331,33 @@ AWS CloudWatch is focused on the operational aspects, such as performance and he
 | **Storage** | Stores data in CloudWatch dashboards as metrics and logs. | Centralizes logs across regions/accounts and stores them in S3 buckets. |
 | **Pricing** | Free basic monitoring; charges apply for detailed monitoring and additional features. | Free for basic event history; charges apply for extended history and log delivery to S3. |
 | **Common Users** | Developers, IT operators, and system administrators. | Security and compliance teams, auditors, and IT administrators. |
+
+## AWS Organizations
+
+AWS Organizations is an AWS service designed for account management, enabling you to consolidate multiple AWS accounts into a single organization.
+
+### Core Features
+
+- **Account Management**: Centralize control over your AWS accounts, making it easier to manage them as a cohesive unit.
+- **Consolidated Billing**: Receive a single bill for all accounts within your organization, simplifying the payment process.
+- **Organizational Units (OUs)**: Structure your accounts into OUs for finer-grained control over resources and policies.
+- **Service Control Policies (SCPs)**: Apply permission policies across your organization to ensure compliance and security.
+
+### Advanced Features
+
+- **Tag Policies**: Implement standard tags across your organization for consistent resource identification.
+- **Backup Policies**: Automate AWS Backups across multiple accounts for enhanced data protection.
+- **AI Services Opt-Out Policies**: Control the use of AI services that store customer content.
+
+### Best Practices
+
+- **Use OUs for Scalability**: As your organization grows, use OUs to manage accounts more effectively.
+- **Implement Strong SCPs**: Ensure that SCPs are robust and reflect your organization's security requirements.
+- **Monitor with AWS CloudTrail**: Keep track of user activity and API usage across your AWS accounts.
+
+### Getting Started
+
+1. **Create Your Organization**: Set up your organization and designate a management account.
+2. **Invite Accounts**: Add existing AWS accounts or create new ones within your organization.
+3. **Set Up OUs**: Organize your accounts into OUs and assign relevant policies.
+4. **Apply SCPs**: Define and apply SCPs to manage permissions and maintain security standards.
