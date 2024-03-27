@@ -149,7 +149,26 @@ A block device mapping that specifies the volumes to attach to the instance when
 The following diagram summarizes the AMI lifecycle. After you create and register an AMI, you can use it to launch new instances. (You can also launch instances from an AMI if the AMI owner grants you launch permissions.) You can copy an AMI within the same AWS Region or to different AWS Regions. When you no longer require an AMI, you can deregister it.
 
 ![alt text](image-5.png)
+
 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html>
+
+## Types of AWS AMIs
+
+AWS AMIs are essential for creating virtual machines within the AWS ecosystem. They contain the information necessary to boot and run instances.
+
+### AMI Categories
+
+| AMI Type | Description | Use Cases |
+|----------|-------------|-----------|
+| **Amazon EBS-Backed AMI** | The root device for an instance launched from the AMI is an Amazon EBS volume created from an EBS snapshot. | Recommended for applications that require persistent storage. |
+| **Instance Store-Backed AMI** | The root device for an instance launched from the AMI is an instance store volume created from a template stored in Amazon S3. | Suitable for temporary storage that changes frequently. |
+| **Amazon Linux AMI** | A supported and maintained image provided by AWS, optimized for AWS platforms. | Ideal for applications that are designed to run on Amazon Linux. |
+| **Windows AMI** | Provides Windows Server environments for running instances. | Used for applications that require Windows operating systems. |
+| **Marketplace AMI** | AMIs provided by third-party vendors with pre-configured operating systems and software. | Useful for specialized software or licensing requirements. |
+| **Community AMI** | AMIs that are created and shared by AWS users. | Good for community-supported configurations and applications. |
+| **Private AMI** | Custom AMIs created by users for their own use, which can be shared with specific AWS accounts. | Best for customized environments that need to be replicated. |
+
+For more detailed information on AWS AMIs, you can refer to the [AWS AMI documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html).
 
 ## EC2 pricing options
 
