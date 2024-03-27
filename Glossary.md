@@ -262,6 +262,18 @@ AWS IAM is a web service that helps you securely control access to AWS resources
 
 - **AWS Organizations Integration**: Centrally manage policies across multiple AWS accounts.
 
+## Comparison of AWS IAM Users, Groups, and Roles
+
+| Feature | IAM Users | IAM Groups | IAM Roles |
+|---------|-----------|------------|-----------|
+| **Definition** | An IAM user is an entity that represents a person or application that interacts with AWS services. | An IAM group is a collection of IAM users that you can manage as a single unit. | An IAM role is an entity with permission policies that determine what the identity can and cannot do in AWS. |
+| **Credentials** | Can be assigned long-term credentials like passwords and access keys. | Does not have credentials; instead, users within the group inherit permissions. | Does not have standard long-term credentials. Access is provided via temporary security tokens. |
+| **Use Case** | For individuals or applications requiring long-term access to AWS resources. | To manage permissions for multiple users with similar responsibilities. | For delegating permissions across AWS services, accounts, or to federated users. |
+| **Permissions** | Assigned directly to the user or inherited through group membership. | Permissions are assigned to the group, and all users within the group inherit them. | Assigned to the role and assumed by trusted entities. |
+| **Best Practice** | Create individual IAM users for anyone who needs access to your AWS account. | Use groups to assign permissions to users with similar job functions. | Use roles for applications running on EC2 instances or for cross-account access. |
+
+For more detailed information on IAM entities, you can refer to the [AWS IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html).
+
 For more detailed information and best practices, you can refer to the official [AWS IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
 
 ## AWS Defense Layers of Security
