@@ -782,3 +782,16 @@ For detailed documentation on AWS X-Ray, including how to get started and instru
 
 Sample:
 ![alt text](image-8.png)
+
+## Comparison of AWS Analytics Services
+
+AWS offers a range of analytics services that allow you to analyze and process data stored in the cloud. Below is a comparison of AWS Athena, Glue, S3 Select, and Redshift Spectrum.
+
+| Service | Description | Use Cases | Key Features |
+|---------|-------------|-----------|--------------|
+| **AWS Athena** | An interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL. | Ad-hoc analysis, reporting, and data exploration. | - Serverless, no infrastructure to manage. <br> - Pay-per-query pricing model. <br> - Integrates with AWS Glue Data Catalog. |
+| **AWS Glue** | A fully managed extract, transform, and load (ETL) service that makes it simple and cost-effective to categorize, clean, enrich, and move data. | Data integration, ETL jobs for data warehousing. | - Serverless data integration service. <br> - Visual ETL job designer. <br> - Data cataloging and job scheduling. |
+| **S3 Select** | Allows applications to retrieve only a subset of data from an object in S3. | Retrieving specific data from within an object, reducing data transfer. | - Reduces the amount of data loaded and transferred. <br> - Can be used to improve performance and reduce costs. |
+| **Redshift Spectrum** | Extends Redshift querying capability over S3 data, allowing you to run complex queries against exabytes of unstructured data. | Running complex queries on large volumes of unstructured data. | - Directly query data in S3. <br> - Supports complex joins and window functions. <br> - Pay-per-query pricing model. |
+
+Each service is optimized for specific use cases and offers unique features that can help you manage and analyze your data effectively.
