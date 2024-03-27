@@ -152,11 +152,11 @@ The following diagram summarizes the AMI lifecycle. After you create and registe
 
 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html>
 
-## Types of AWS AMIs
+### Types of AWS AMIs
 
 AWS AMIs are essential for creating virtual machines within the AWS ecosystem. They contain the information necessary to boot and run instances.
 
-### AMI Categories
+#### AMI Categories
 
 | AMI Type | Description | Use Cases |
 |----------|-------------|-----------|
@@ -271,8 +271,6 @@ AWS IAM is a web service that helps you securely control access to AWS resources
 | **Use Case** | For individuals or applications requiring long-term access to AWS resources. | To manage permissions for multiple users with similar responsibilities. | For delegating permissions across AWS services, accounts, or to federated users. |
 | **Permissions** | Assigned directly to the user or inherited through group membership. | Permissions are assigned to the group, and all users within the group inherit them. | Assigned to the role and assumed by trusted entities. |
 | **Best Practice** | Create individual IAM users for anyone who needs access to your AWS account. | Use groups to assign permissions to users with similar job functions. | Use roles for applications running on EC2 instances or for cross-account access. |
-
-For more detailed information on IAM entities, you can refer to the [AWS IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html).
 
 For more detailed information and best practices, you can refer to the official [AWS IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
 
