@@ -22,7 +22,7 @@ Each cloud service model offers different levels of control, flexibility, and ma
 
 ## Storage Services
 
-### Comparison table highlighting the key differences between AWS S3, EFS, EBS, and Instance Store
+### AWS S3 vs EFS vs EBS vs Instance Store
 
 | Feature | AWS S3 | AWS EFS | AWS EBS | Instance Store |
 |---------|--------|---------|---------|----------------|
