@@ -391,6 +391,7 @@ AWS Organizations is an AWS service designed for account management, enabling yo
 4. **Apply SCPs**: Define and apply SCPs to manage permissions and maintain security standards.
 
 ![alt text](image-3.png)
+<https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html>
 
 ## AWS Well-Architected Framework
 
@@ -464,3 +465,25 @@ The AWS Cloud Adoption Framework (CAF) is a blueprint for cloud adoption that pr
 - **CAF Alignment**: Aligns cloud strategy with the AWS Well-Architected Framework.
 - **CAF Resources**: Offers tools like the AWS CAF Alignment Tool to assess cloud readiness.
 - **Continuous Improvement**: Encourages iterative improvement of cloud practices.
+
+## Amazon CloudFront
+
+Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency and high transfer speeds.
+
+### How CloudFront Works
+
+- **Content Delivery**: CloudFront delivers your content through a worldwide network of data centers called edge locations.
+- **Low Latency**: When a user requests content, the request is routed to the edge location that provides the lowest latency.
+- **Origin Sources**: CloudFront retrieves content from an origin you've defined, such as an Amazon S3 bucket or an HTTP server.
+
+### Amazon CloudFront Key Features
+
+- **Global Distribution**: Utilizes a global network of edge locations to cache and deliver content.
+- **Security**: Integrates with AWS Shield for DDoS protection and AWS Web Application Firewall (WAF) for a robust security layer.
+- **Customizability**: Offers a variety of features to customize content delivery, including URL signing, SSL/TLS encryption, and more.
+
+### Amazon CloudFront Use Cases
+
+- **Static and Dynamic Content Delivery**: Efficiently distributes both static (.html, .css, .js) and dynamic content.
+- **Video Streaming**: Optimizes the delivery of video content with high data transfer rates.
+- **Software Distribution**: Delivers software and updates to users around the world.
