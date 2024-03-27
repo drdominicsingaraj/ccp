@@ -516,16 +516,28 @@ AWS Trusted Advisor is an online resource that helps you optimize your AWS envir
 
 AWS Systems Manager enables visibility and control of your infrastructure on AWS. It provides a unified interface that allows you to automate operational tasks and manage your AWS resources.
 
-### Enhanced Features
+### AWS Systems Manager:Key Features
 
-- **Change Management**: Automate change requests and approvals, ensuring standardized operational procedures.
-- **Operational Insights**: Use CloudWatch and CloudTrail integration for detailed logging and monitoring.
-- **Hybrid Environment Management**: Manage both AWS and on-premises resources with a single interface.
-- **Compliance Enforcement**: Ensure your resources are compliant with policy requirements.
+| Feature | Description |
+|---------|-------------|
+| **Centralized Control** | Manage your AWS resources centrally. |
+| **Visibility into Systems** | Get operational insights about the health and performance of your infrastructure. |
+| **Automation** | Automate operational tasks to increase efficiency and reduce human error. |
+| **Change Management** | Automate change requests and approvals, ensuring standardized operational procedures. |
+| **Operational Insights** | Use CloudWatch and CloudTrail integration for detailed logging and monitoring. |
+| **Hybrid Environment Management** | Manage both AWS and on-premises resources with a single interface. |
+| **Compliance Enforcement** | Ensure your resources are compliant with policy requirements. |
 
 ### Additional Capabilities
 
-- **State Manager**: Maintain consistent configuration of your instances.
-- **Inventory Management**: Collect software inventory and use it for operational tasks and compliance.
-- **Maintenance Windows**: Schedule maintenance windows for performing potentially disruptive actions.
-- **Document Builder**: Use Document Builder to create runbooks with automation actions without needing JSON or YAML syntax.
+| Capability | Description |
+|------------|-------------|
+| **Resource Groups** | Organize resources based on tags and manage them collectively. |
+| **Insights Dashboard** | View aggregated data and act on operational issues. |
+| **Parameter Store** | Securely store configuration data and secrets. |
+| **Automation** | Simplify common maintenance and deployment tasks. |
+| **Patch Manager** | Automate patching of your EC2 instances and on-premises servers. |
+| **State Manager** | Maintain consistent configuration of your instances. |
+| **Inventory Management** | Collect software inventory and use it for operational tasks and compliance. |
+| **Maintenance Windows** | Schedule maintenance windows for performing potentially disruptive actions. |
+| **Document Builder** | Use Document Builder to create runbooks with automation actions without needing JSON or YAML syntax. |
