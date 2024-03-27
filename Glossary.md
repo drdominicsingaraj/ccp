@@ -13,6 +13,12 @@ Each cloud service model offers different levels of control, flexibility, and ma
 ![Pizza as a Service Analogy](image-4.png)
 [Pizza as a Service 2.0](https://engineering.dunelm.com/pizza-as-a-model-453b838ca165)
 
+## Shared Responsibility Model
+
+![Shared Responsibility Model](image-6.png)
+
+[Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/)
+
 ## Storage Services
 
 ### Comparison table highlighting the key differences between AWS S3, EFS, EBS, and Instance Store
