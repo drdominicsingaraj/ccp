@@ -1,5 +1,15 @@
 # Glossary
 
+## Cloud Service Models Comparison
+
+| Service Model | Description | Customer Responsibility | Provider Responsibility | AWS Examples | Pros | Cons |
+|---------------|-------------|-------------------------|-------------------------|--------------|------|------|
+| **IaaS (Infrastructure as a Service)** | Provides virtualized computing resources over the internet. | Applications, Data, Runtime, Middleware, OS | Virtualization, Servers, Storage, Networking | Amazon EC2, Amazon S3 | High control of underlying resources, flexible | Requires more management |
+| **PaaS (Platform as a Service)** | Offers hardware and software tools over the internet, typically for application development. | Applications, Data | Runtime, Middleware, OS, Virtualization, Servers, Storage, Networking | AWS Elastic Beanstalk, AWS Lambda | Easier to manage, focus on development | Less control over the environment |
+| **SaaS (Software as a Service)** | Delivers software over the internet on a subscription basis. | None | Applications, Data, Runtime, Middleware, OS, Virtualization, Servers, Storage, Networking | Amazon WorkSpaces, Amazon Chime | Minimal responsibility, quick setup | Least control, dependent on provider |
+
+Each cloud service model offers different levels of control, flexibility, and management, which can be selected based on the needs of the business or application. IaaS provides the most control but requires more management, PaaS eases the management burden but offers less control, and SaaS offers the least control but is the easiest to use and set up.
+
 ## Storage Services
 
 ### Comparison table highlighting the key differences between AWS S3, EFS, EBS, and Instance Store
