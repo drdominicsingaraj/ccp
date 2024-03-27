@@ -214,17 +214,28 @@ For more detailed information on AWS AMIs, you can refer to the [AWS AMI documen
 
 ## AWS Security Services
 
-| Service | Description | Use Cases | Key Features |
-|---------|-------------|-----------|--------------|
-| **AWS IAM** | Manages access to AWS services and resources securely. | User and group management, access policies, multi-factor authentication. | Granular permissions, policy simulation, integration with other AWS services. |
-| **Amazon Cognito** | Provides user sign-up, sign-in, and access control to web and mobile applications. | User directory management, social identity provider integration, user data synchronization. | User pools, identity pools, federation with social identity providers. |
-| **AWS KMS** | Manages cryptographic keys for your applications. | Encryption key management, key rotation, key usage policies. | Hardware security modules, automated key rotation, integration with AWS services. |
-| **AWS Shield** | Protects against DDoS attacks. | DDoS protection for AWS services, automatic attack mitigation, real-time visibility into attacks. | Always-on detection, inline mitigation, cost protection. |
-| **Amazon Inspector** | Automated security assessment service to help improve the security and compliance of applications deployed on AWS. | Vulnerability detection, security best practices enforcement, application scanning. | Automated assessments, detailed findings, integration with AWS services. |
-| **AWS WAF** | Web application firewall that helps protect web applications from common web exploits. | Rule management for web traffic filtering, real-time metrics and logging, automated web security. | Customizable web security rules, real-time visibility, rate-based rules. |
-| **Amazon GuardDuty** | Threat detection service that continuously monitors for malicious activity and unauthorized behavior. | Anomaly detection, threat prioritization, integrated threat intelligence. | Machine learning, anomaly detection, integrated threat intelligence feeds. |
-| **AWS Security Hub** | Centralized view of your security alerts and security posture across your AWS accounts. | Aggregated security findings, compliance checks, automated remediation. | Comprehensive security and compliance checks, automated response and remediation. |
-| **AWS Audit Manager** | Helps you continuously audit your AWS usage to simplify how you assess risk and compliance. | Audit evidence collection, compliance monitoring, audit preparation. | Prebuilt frameworks for compliance, automated evidence collection, continuous auditing. |
+### Comparison of AWS Security Services
+
+AWS offers a variety of security services designed to help protect your applications and data. Below is a comparison of some of these services, including their primary use cases.
+
+| Service | Description | Use Cases |
+|---------|-------------|-----------|
+| **AWS Identity and Access Management (IAM)** | Manages access to AWS services and resources securely. | User and group management, access policies, multi-factor authentication. |
+| **AWS Key Management Service (KMS)** | Manages cryptographic keys for your applications. | Encryption and decryption of data, management of cryptographic keys. |
+| **AWS WAF (Web Application Firewall)** | Protects web applications from common web exploits. | Filtering traffic, blocking common attack patterns, such as SQL injection or cross-site scripting. |
+| **AWS Shield** | Provides protection against Distributed Denial of Service (DDoS) attacks. | Protecting applications running on AWS from DDoS attacks. |
+| **Amazon Inspector** | Automated security assessment service to help improve the security and compliance of applications deployed on AWS. | Assessing applications for vulnerabilities or deviations from best practices. |
+| **AWS Secrets Manager** | Protects access to your applications, services, and IT resources. | Managing secrets, rotating credentials automatically, secure application access. |
+| **AWS Certificate Manager** | Provisions, manages, and deploys public and private SSL/TLS certificates. | Managing SSL/TLS certificates for AWS-based websites and applications. |
+| **AWS CloudTrail** | Enables governance, compliance, operational auditing, and risk auditing of your AWS account. | Logging and monitoring account activity across your AWS infrastructure. |
+| **Amazon GuardDuty** | Provides intelligent threat detection to protect your AWS accounts and workloads. | Monitoring for malicious or unauthorized behavior to protect your AWS accounts. |
+| **AWS Cognito** | Provides user identity and data synchronization to help create a secure user directory. | User authentication and mobile data synchronization. |
+| **AWS Security Hub** | Gives you a comprehensive view of your high-priority security alerts and compliance status. | Aggregating security findings from various services, automated compliance checks. |
+| **AWS Audit Manager** | Helps you continuously audit your AWS usage to simplify how you manage risk and compliance with regulations and industry standards. | Automating evidence collection, simplifying compliance audits, and managing stakeholder reviews. |
+| **AWS Macie** | A fully managed data security and data privacy service that uses machine learning and pattern matching to discover and protect sensitive data in AWS. | Discovering and protecting sensitive data in Amazon S3, monitoring data access for anomalies. |
+| **AWS CloudHSM** | Offers secure cryptographic key storage by providing managed hardware security modules in the AWS Cloud. | Cryptographic key storage, FIPS 140-2 level 3 security, dedicated hardware security module management. |
+
+For a more comprehensive understanding of AWS security services and how they can be applied to your specific use case, refer to the [AWS Security Services documentation](https://docs.aws.amazon.com/cloudhsm/).
 
 ## AWS Identity and Access Management (IAM)
 
