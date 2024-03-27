@@ -88,6 +88,24 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
 | **Dedicated Instances** | Instances run on hardware that's dedicated to a single customer. | When you need to ensure your instances are physically isolated at the host hardware level from instances that belong to other AWS accounts. | Per hour | Varies | Physical isolation meets certain compliance requirements. |
 | **Capacity Reservations** | Reserve capacity for your EC2 instances in a specific Availability Zone for any duration. | When you need to ensure you have EC2 capacity when you need it, for as long as you need it. | None | Varies | Good for applications that require reserved capacity. |
 
+## Amazon EC2 Instance Types: Detailed Comparison
+
+| Instance Type | Use Case | CPU | Memory | Storage | Networking | Additional Features | Suitable Workloads |
+|---------------|----------|-----|--------|---------|------------|---------------------|--------------------|
+| **General Purpose** | Balanced workloads | Variable | Variable | EBS only | Up to 25 Gbps | Balance of compute, memory, and networking resources | Web servers, code repositories |
+| **Compute Optimized** | Compute-intensive | High | Moderate | EBS only | Up to 100 Gbps | High CPU performance for batch processing, ad serving | High-performance web servers, scientific modeling |
+| **Memory Optimized** | Memory-intensive | Moderate | High | EBS only | Up to 100 Gbps | Fast performance for large in-memory databases | Real-time big data analytics, HPC |
+| **Storage Optimized** | Storage-intensive | High | High | SSD/HDD | Up to 100 Gbps | High sequential read/write access | NoSQL databases, data warehousing |
+| **Accelerated Computing** | Graphics/ML tasks | Variable | High | EBS only | Up to 100 Gbps | Hardware accelerators for floating-point calculations, graphics processing | Machine learning, 3D visualization |
+| **High Performance Computing** | HPC applications | Very High | High | EBS only | Up to 400 Gbps | Complex scientific, engineering, business applications | Genomics, computational chemistry |
+
+## Additional Considerations
+
+- **Pricing**: Reserved Instances can provide a significant discount compared to On-Demand pricing, depending on the term and payment options.
+- **Flexibility**: Spot Instances allow you to take advantage of unused EC2 capacity at a potentially lower cost.
+- **Scalability**: Auto Scaling ensures you have the correct number of EC2 instances available to handle your application's load.
+- **Security**: Amazon VPC lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.
+
 ## AWS Reserved Instances Types Comparison
 
 | Feature | Standard Reserved Instance | Convertible Reserved Instance | Scheduled Reserved Instance |
