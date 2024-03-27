@@ -79,6 +79,40 @@ AWS Snowcone is the smallest member of the Snow Family, designed to fit in tight
 
 For more detailed specifications and use cases, you can refer to the official AWS documentation on [AWS Snowcone](https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snowcone-how-snowcone-works.html).
 
+## AWS Transfer Family Options
+
+AWS Transfer Family simplifies the migration and management of file transfer protocols in the cloud, providing secure options for transferring files.
+
+### Transfer Options
+
+| Protocol | Description | Use Cases |
+|----------|-------------|-----------|
+| **SFTP (SSH File Transfer Protocol)** | A secure file transfer protocol that uses SSH to encrypt data in transit. | Securely transferring files over the internet, commonly used in business-to-business exchanges. |
+| **FTPS (File Transfer Protocol Secure)** | An extension of FTP that uses TLS to encrypt control and data connections. | Transferring files with encryption, suitable for compliance with security standards. |
+| **FTP (File Transfer Protocol)** | A standard network protocol for transferring files between client and server. | Transferring files without native encryption, typically used within private networks. |
+| **AS2 (Applicability Statement 2)** | A protocol used to securely and reliably send and receive data over the internet. | Exchanging data like EDI messages or other types of data files between businesses. |
+
+AWS Transfer Family also includes features like SFTP connectors for integrating with existing SFTP environments, identity provider options for server endpoints, and automation of file processing.
+
+For more information on AWS Transfer Family, you can refer to the [AWS Transfer Family Documentation](https://docs.aws.amazon.com/transfer/) and [AWS Transfer Family FAQs](https://aws.amazon.com/aws-transfer-family/faqs/).
+
+## AWS Storage Gateway Categories
+
+AWS Storage Gateway connects on-premises software appliances with cloud-based storage, providing seamless and secure integration between an organization's on-premises IT environment and AWS's storage infrastructure.
+
+### Gateway Types and Features
+
+| Gateway Type | Description | Use Cases | Additional Features |
+|--------------|-------------|-----------|---------------------|
+| **File Gateway** | Connects to the cloud to store files as S3 objects. | Integrating existing file-based applications and backup images with cloud storage. | - NFS and SMB protocol support. <br> - Data is stored as native S3 objects. <br> - Integration with AWS IAM for access control. |
+| **Volume Gateway** | Provides cloud-backed storage volumes. | Offsite backups, disaster recovery, and data mirroring. | - Stored and cached volume options. <br> - Integration with AWS Backup for managing backups. |
+| **Tape Gateway** | Offers a virtual tape infrastructure that scales seamlessly with your business needs. | Replacing physical tapes with virtual tapes. | - Compatible with existing tape-based backup infrastructure. <br> - Cost-effective and durable archiving in S3 Glacier and S3 Glacier Deep Archive. |
+| **Additional Points** | - Standard storage protocols like NFS, SMB, iSCSI, and iSCSI-VTL. <br> - Fully managed cache for low-latency access to frequently accessed data. <br> - Optimized and secure data transfer using SSL encryption. <br> - End-to-end protection of customer data from the enterprise network to AWS. <br> - Multi-part management, automatic buffering, delta transfers, and data compression across all gateway types. |
+
+AWS Storage Gateway facilitates a hybrid cloud storage environment that enables you to leverage on-premises and cloud storage seamlessly. It's designed to reduce costs, simplify storage management, and make data available for on-premises applications with low-latency access.
+
+For more detailed information on AWS Storage Gateway, you can refer to the [AWS Storage Gateway Features page](https://aws.amazon.com/storagegateway/features/).
+
 ## AWS Virtual Private Cloud (VPC) and Related Components
 
 | Component | Description | Additional Points |
