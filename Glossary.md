@@ -540,6 +540,25 @@ AWS Route 53 is a scalable and highly available Domain Name System (DNS) web ser
 - **Global Server Load Balancing**: Route traffic to multiple endpoints worldwide, which can be in AWS or outside of AWS.
 - **Disaster Recovery**: Set up DNS health checks and failover to reroute your users to a standby web environment in case your primary web application becomes unavailable.
 
+## AWS Route 53 Routing Policies
+
+Route 53 routing policies determine how traffic is routed to your application's resources. Each policy has specific use cases and functionalities.
+
+### Routing Policy Types
+
+| Policy Type | Description | Use Cases |
+|-------------|-------------|-----------|
+| **Simple** | Routes traffic directly to a single resource. | Suitable for domains with a single resource that performs a given function. |
+| **Weighted** | Assigns weights to resource records to specify the proportion of traffic for each. | Useful for load balancing and A/B testing. |
+| **Failover** | Routes traffic to a secondary resource when the primary is unavailable. | Ideal for active-passive failover setups. |
+| **Latency** | Directs traffic to the resource that provides the lowest latency. | Best for global applications where minimizing latency is crucial. |
+| **Geolocation** | Routes traffic based on the geographic location of users. | Perfect for delivering localized content and managing geo-restrictions. |
+| **Geoproximity** | (Traffic Flow only) Routes traffic based on the geographic location of your users and resources. | Optimizes traffic distribution across multiple locations. |
+| **Multivalue Answer** | Responds to DNS queries with up to eight healthy records selected at random. | Enhances availability by routing traffic across multiple resources. |
+| **Weighted** | Routes traffic to multiple resources in proportions that you specify. | Facilitates traffic distribution and phased rollouts. |
+
+For more detailed information on Route 53 routing policies, you can refer to the [AWS Route 53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html).
+
 ## AWS CloudWatch vs CloudTrail
 
 AWS CloudWatch is focused on the operational aspects, such as performance and health of AWS services, while CloudTrail is focused on the compliance and governance aspects, tracking the API calls and activities within your AWS account
