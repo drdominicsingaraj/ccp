@@ -814,3 +814,16 @@ AWS offers a range of analytics services that allow you to analyze and process d
 | **Redshift Spectrum** | Extends Redshift querying capability over S3 data, allowing you to run complex queries against exabytes of unstructured data. | Running complex queries on large volumes of unstructured data. | - Directly query data in S3. <br> - Supports complex joins and window functions. <br> - Pay-per-query pricing model. |
 
 Each service is optimized for specific use cases and offers unique features that can help you manage and analyze your data effectively.
+
+## AWS CI/CD Services Comparison
+
+AWS offers a suite of developer tools for continuous integration and continuous delivery (CI/CD) of applications. Below is a comparison of AWS CodeCommit, CodeDeploy, CodeBuild, and CodePipeline.
+
+| Service | Description | Use Cases | Key Features |
+|---------|-------------|-----------|--------------|
+| **AWS CodeCommit** | A source control service that hosts secure Git-based repositories. | Collaborative coding, version control, code storage. | - Fully managed. <br> - Integrates with other AWS services. <br> - Scalable and secure. |
+| **AWS CodeDeploy** | A deployment service that automates deployments to various compute services. | Automated deployments, centralized control, rollback capabilities. | - Supports EC2, Fargate, Lambda. <br> - Blue/green deployments. <br> - Easy rollback. |
+| **AWS CodeBuild** | A fully managed continuous integration service that compiles source code, runs tests, and produces software packages. | Building and testing code, producing deployable artifacts. | - Managed build environments. <br> - Scales automatically. <br> - Integrates with other AWS services. |
+| **AWS CodePipeline** | A continuous delivery service that automates the build, test, and deploy phases of your release process. | Continuous delivery, fast and reliable updates, workflow modeling. | - Automated pipelines. <br> - Integrates with third-party services. <br> - Customizable. |
+
+For more detailed information on these services, you can refer to the official AWS documentation.
