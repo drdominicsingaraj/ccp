@@ -82,14 +82,16 @@ For more detailed information on AWS VPC and its components, you can refer to th
 
 ## AWS Global Infrastructure
 
-AWS Global Infrastructure is the foundation of Amazon Web Services (AWS), providing a robust, scalable, and high-performance platform for deploying applications and services worldwide.
+AWS Global Infrastructure is the backbone of Amazon Web Services, providing the necessary foundation to deliver services securely, with high availability, and low-latency performance across the globe.
 
 ### Components of AWS Global Infrastructure
 
-- **Regions**: Geographical locations around the world where AWS clusters data centers. Each region is a separate geographic area that has multiple, isolated locations known as Availability Zones.
-- **Availability Zones (AZs)**: Each AZ is one or more discrete data centers with redundant power, networking, and connectivity in an AWS Region.
-- **Edge Locations**: Sites deployed in major cities and highly populated areas around the world that provide content delivery network (CDN) services to reduce latency.
-- **Wavelength Zones**: Infrastructure deployments that embed AWS compute and storage services within telecommunications providers' data centers at the edge of the 5G network.
+| Component | Description | Features |
+|-----------|-------------|----------|
+| **Regions** | Geographical locations around the world where AWS clusters data centers. | Multiple isolated Availability Zones for fault tolerance. |
+| **Availability Zones** | One or more discrete data centers with redundant power, networking, and connectivity. | High availability and redundancy within each region. |
+| **Edge Locations** | Sites deployed in major cities and highly populated areas to provide content delivery network (CDN) services. | Reduced latency and higher performance for end-users. |
+| **Wavelength Zones** | Infrastructure deployments that embed AWS compute and storage services within telecommunications providers' data centers at the edge of the 5G network. | Ultra-low latency applications for mobile and connected devices. |
 
 ### Key Features
 
@@ -98,12 +100,12 @@ AWS Global Infrastructure is the foundation of Amazon Web Services (AWS), provid
 - **Performance**: AWS provides low-latency networking and high-speed connectivity across different regions and services.
 - **Scalability**: Easily scale your applications up or down based on demand, across the globe.
 
-## Global Reach
+### Global Reach
 
 - AWS has announced plans for more Availability Zones and Regions, expanding its global presence to serve a wider audience.
 - AWS infrastructure supports millions of active customers and a broad spectrum of use cases across virtually every industry.
 
-For more information on AWS Global Infrastructure, you can visit the [AWS Global Infrastructure page](https://aws.amazon.com/about-aws/global-infrastructure/).
+For more information on AWS Global Infrastructure, you can visit the AWS Global Infrastructure page.
 
 ## RDS vs Dynamo DB vs Redshift
 
