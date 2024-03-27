@@ -10,6 +10,9 @@
 
 Each cloud service model offers different levels of control, flexibility, and management, which can be selected based on the needs of the business or application. IaaS provides the most control but requires more management, PaaS eases the management burden but offers less control, and SaaS offers the least control but is the easiest to use and set up.
 
+![Pizza as a Service Analogy](image-4.png)
+[Pizza as a Service 2.0](https://engineering.dunelm.com/pizza-as-a-model-453b838ca165)
+
 ## Storage Services
 
 ### Comparison table highlighting the key differences between AWS S3, EFS, EBS, and Instance Store
