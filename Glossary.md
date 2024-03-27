@@ -58,6 +58,27 @@ Each cloud service model offers different levels of control, flexibility, and ma
 | **Performance** | High throughput and low latency | Adapts based on access patterns | Lower throughput than Standard | Lower throughput than Standard | Lowest throughput | Lowest throughput |
 | **Pricing** | Higher cost for storage | Cost varies based on access | Lower storage cost than Standard | Lower storage cost than Standard and Standard-IA | Low storage cost with higher retrieval fees | Lowest storage cost with highest retrieval fees |
 
+## AWS Snowball Family Devices Comparison
+
+AWS Snowball devices are part of the AWS Snow Family, designed for edge computing, data migration, and edge storage. Below is a comparison of the different Snowball Edge device options, AWS Snowmobile, and AWS Snowcone.
+
+| Device Option | Storage Capacity | Compute Functionality | Suitable Use Cases |
+|---------------|------------------|-----------------------|--------------------|
+| **Snowball Edge Storage-Optimized (for data transfer)** | 80 TB | - | Large scale-data transfer and local storage |
+| **Snowball Edge Storage-Optimized 210 TB** | 210 TB | - | Large scale-data transfer with higher storage needs |
+| **Snowball Edge Storage-Optimized (with EC2-compatible compute functionality)** | 80 TB | 40 vCPUs, 80 GB of memory | Data transfer and local compute workloads |
+| **Snowball Edge Compute-Optimized (with AMD EPYC Gen2)** | 28 TB NVMe SSD | 104 vCPUs, 416 GB of memory | High-performance compute workloads |
+| **Snowball Edge Compute-Optimized (with AMD EPYC Gen1)** | 39.5 TB | 52 vCPUs, 208 GB of memory | Moderate compute workloads |
+| **Snowball Edge Compute-Optimized with GPU** | 39.5 TB | 52 vCPUs, 208 GB of memory, GPU | Workloads requiring GPU capabilities |
+| **Snowmobile** | 100 PB | - | Exabyte-scale data transfer into AWS |
+| **Original Snowball 50 TB** | 50 TB | - | Data transfer for smaller datasets |
+| **Original Snowball 80 TB** | 80 TB | - | Data transfer for larger datasets |
+| **Snowcone** | 8 TB | Optional EC2-compatible compute | Small-scale data transfer, edge computing, and edge storage |
+
+AWS Snowcone is the smallest member of the Snow Family, designed to fit in tight spaces and withstand harsh conditions. It's suitable for edge computing and transferring small amounts of data to AWS.
+
+For more detailed specifications and use cases, you can refer to the official AWS documentation on [AWS Snowcone](https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snowcone-how-snowcone-works.html).
+
 ## AWS Virtual Private Cloud (VPC) and Related Components
 
 | Component | Description | Additional Points |
