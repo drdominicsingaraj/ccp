@@ -237,6 +237,31 @@ AWS IAM is a web service that helps you securely control access to AWS resources
 
 For more detailed information and best practices, you can refer to the official [AWS IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
 
+## AWS Defense Layers of Security
+
+AWS advocates for a comprehensive security strategy that involves multiple layers of defense to protect and manage resources effectively. This multi-layered approach is aligned with the AWS Well-Architected Framework.
+
+### Expanded Defense Layers
+
+| Layer | Description | AWS Services | Additional Points |
+|-------|-------------|--------------|-------------------|
+| **Edge of Network** | Protection against DDoS attacks and other external threats. | AWS Shield, Amazon CloudFront | Utilizes global edge locations to detect and mitigate threats before they reach your resources|
+| **VPC** | Isolation of resources within a virtual network. | Amazon VPC, Security Groups, Network ACLs | Supports VPC peering and endpoints for secure interconnectivity|
+| **Load Balancer** | Distribution of traffic across resources, providing an additional layer of security. | Elastic Load Balancing (ELB) | Offers SSL/TLS termination to help manage certificates and encryption. |
+| **Compute** | Security at the instance or service level. | Amazon EC2, AWS Lambda | Includes instance identity and isolation, along with service-specific security features. |
+| **Operating System** | Hardening of the OS and management of host-based firewalls. | Amazon EC2 instances, AWS Systems Manager | Regular patching and configuration management to maintain security posture. |
+| **Application** | Security measures within the application code and runtime environment. | AWS WAF, Amazon Inspector | Real-time inspection and protection against web exploits and vulnerabilities. |
+| **Data** | Encryption and access controls for data at rest and in transit. | Amazon S3, AWS Key Management Service (KMS) | Use of encryption keys managed by KMS and integration with AWS Identity and Access Management (IAM). |
+
+## Best Practices
+
+- **Apply Security at All Layers**: Implement security controls at every layer of your stack, from the edge to the data layer.
+- **Automate Security Best Practices**: Use AWS services to automate security best practices, ensuring consistent application across resources.
+- **Protect Data in Transit and at Rest**: Utilize AWS encryption services to secure data, regardless of its state.
+- **Prepare for Security Events**: Implement an incident response plan and conduct regular simulations to ensure readiness.
+
+For more detailed guidance on implementing these security layers, you can refer to the [AWS Security Blog](https://aws.amazon.com/blogs/security/security-at-multiple-layers-for-web-administered-apps/) and the [AWS Well-Architected Framework documentation](https://docs.aws.amazon.com/whitepapers/latest/security-at-the-edge/security-at-the-edge.pdf).
+
 ## AWS CloudFormation
 
 AWS CloudFormation is an automated provisioning engine designed to deploy resources consistently and repeatably across various AWS services. It enables developers and system administrators to create and manage a collection of related AWS resources by provisioning and updating them in an orderly and predictable fashion.
