@@ -74,11 +74,36 @@ Each cloud service model offers different levels of control, flexibility, and ma
 | **Elastic Network Interfaces (ENIs)** | Virtual network interfaces that you can attach to instances in your VPC. | Can include primary and secondary private IP addresses, Elastic IP addresses, and security groups. |
 | **VPC Peering** | Allows you to connect one VPC with another via a direct network route using private IP addresses. | Traffic between peered VPCs remains private and does not traverse the public internet. |
 | **Transit Gateway** | Enables you to connect your VPCs and on-premises networks through a central hub. | Simplifies network architecture and reduces operational overhead. |
-| **VPC Flow Logs** | Capture information about the IP traffic going to and from network interfaces in your VPC. | Helps monitor and troubleshoot connectivity issues[^1^][3]. |
-| **Traffic Mirroring** | Copy network traffic from network interfaces and send it to security and monitoring appliances for deep packet inspection. | Useful for content inspection and threat monitoring[^1^][3]. |
-| **VPN Connections** | Connect your VPCs to your on-premises networks using AWS Virtual Private Network (AWS VPN). | Provides secure and private sessions with IP Security (IPSec) and Transport Layer Security (TLS)[^1^][3]. |
+| **VPC Flow Logs** | Capture information about the IP traffic going to and from network interfaces in your VPC. | Helps monitor and troubleshoot connectivity issues. |
+| **Traffic Mirroring** | Copy network traffic from network interfaces and send it to security and monitoring appliances for deep packet inspection. | Useful for content inspection and threat monitoring. |
+| **VPN Connections** | Connect your VPCs to your on-premises networks using AWS Virtual Private Network (AWS VPN). | Provides secure and private sessions with IP Security (IPSec) and Transport Layer Security (TLS). |
 
 For more detailed information on AWS VPC and its components, you can refer to the [AWS VPC User Guide](https://docs.aws.amazon.com/vpc/latest/userguide/how-it-works.html) and [What is Amazon VPC?](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) provided by AWS.
+
+## AWS Global Infrastructure
+
+AWS Global Infrastructure is the foundation of Amazon Web Services (AWS), providing a robust, scalable, and high-performance platform for deploying applications and services worldwide.
+
+### Components of AWS Global Infrastructure
+
+- **Regions**: Geographical locations around the world where AWS clusters data centers. Each region is a separate geographic area that has multiple, isolated locations known as Availability Zones.
+- **Availability Zones (AZs)**: Each AZ is one or more discrete data centers with redundant power, networking, and connectivity in an AWS Region.
+- **Edge Locations**: Sites deployed in major cities and highly populated areas around the world that provide content delivery network (CDN) services to reduce latency.
+- **Wavelength Zones**: Infrastructure deployments that embed AWS compute and storage services within telecommunications providers' data centers at the edge of the 5G network.
+
+### Key Features
+
+- **Security**: AWS infrastructure is designed to be one of the most flexible and secure cloud computing environments available today.
+- **Reliability**: AWS's high-availability data center architecture is designed to maximize reliability and minimize outages.
+- **Performance**: AWS provides low-latency networking and high-speed connectivity across different regions and services.
+- **Scalability**: Easily scale your applications up or down based on demand, across the globe.
+
+## Global Reach
+
+- AWS has announced plans for more Availability Zones and Regions, expanding its global presence to serve a wider audience.
+- AWS infrastructure supports millions of active customers and a broad spectrum of use cases across virtually every industry.
+
+For more information on AWS Global Infrastructure, you can visit the [AWS Global Infrastructure page](https://aws.amazon.com/about-aws/global-infrastructure/).
 
 ## RDS vs Dynamo DB vs Redshift
 
