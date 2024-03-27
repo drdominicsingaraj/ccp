@@ -487,3 +487,45 @@ Amazon CloudFront is a fast content delivery network (CDN) service that securely
 - **Static and Dynamic Content Delivery**: Efficiently distributes both static (.html, .css, .js) and dynamic content.
 - **Video Streaming**: Optimizes the delivery of video content with high data transfer rates.
 - **Software Distribution**: Delivers software and updates to users around the world.
+
+## AWS Trusted Advisor
+
+AWS Trusted Advisor is an online resource that helps you optimize your AWS environment for cost, performance, security, and more by providing best practice recommendations.
+
+### Core Benefits
+
+- **Align with AWS Best Practices**: Identify deviations and get recommended actions to remediate.
+- **Prioritize Important Recommendations**: Focus on the most critical recommendations based on your business priorities and urgency.
+- **Streamline Collaboration**: Improve alignment across teams with better visibility and tracking of recommendations.
+- **Optimize Resources at Scale**: View aggregated recommendations across your organization or integrate programmatically with APIs.
+
+### Trusted Advisor Key Features
+
+- **Cost Optimization**: Identifies underutilized resources to reduce costs and advises on Reserved Instance purchases.
+- **Performance Improvement**: Analyzes usage and configuration to improve application speed and responsiveness.
+- **Security Assessment**: Checks against security standards and best practices to address gaps.
+- **Resilience Enhancement**: Examines the environment for redundancy shortfalls and suggests improvements.
+- **Service Limits Tracking**: Monitors usage and notifies when approaching or exceeding service limits.
+
+## Access and Support Plans
+
+- **Basic and Developer Support Plans**: Limited access to checks.
+- **Business and Enterprise Support Plans**: Full access to all checks, Trusted Advisor Priority, and API access.
+
+## AWS Systems Manager
+
+AWS Systems Manager enables visibility and control of your infrastructure on AWS. It provides a unified interface that allows you to automate operational tasks and manage your AWS resources.
+
+### Enhanced Features
+
+- **Change Management**: Automate change requests and approvals, ensuring standardized operational procedures.
+- **Operational Insights**: Use CloudWatch and CloudTrail integration for detailed logging and monitoring.
+- **Hybrid Environment Management**: Manage both AWS and on-premises resources with a single interface.
+- **Compliance Enforcement**: Ensure your resources are compliant with policy requirements.
+
+### Additional Capabilities
+
+- **State Manager**: Maintain consistent configuration of your instances.
+- **Inventory Management**: Collect software inventory and use it for operational tasks and compliance.
+- **Maintenance Windows**: Schedule maintenance windows for performing potentially disruptive actions.
+- **Document Builder**: Use Document Builder to create runbooks with automation actions without needing JSON or YAML syntax.
