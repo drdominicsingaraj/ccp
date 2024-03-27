@@ -82,16 +82,24 @@ For more detailed information on AWS VPC and its components, you can refer to th
 
 ## AWS Global Infrastructure
 
-AWS Global Infrastructure is the backbone of Amazon Web Services, providing the necessary foundation to deliver services securely, with high availability, and low-latency performance across the globe.
+AWS Global Infrastructure encompasses a variety of services and locations worldwide, ensuring high availability, security, and low-latency performance for AWS customers.
 
-### Components of AWS Global Infrastructure
+### AWS Global Infrastructure Components
 
-| Component | Description | Features |
+| Component | Description | Examples |
 |-----------|-------------|----------|
-| **Regions** | Geographical locations around the world where AWS clusters data centers. | Multiple isolated Availability Zones for fault tolerance. |
-| **Availability Zones** | One or more discrete data centers with redundant power, networking, and connectivity. | High availability and redundancy within each region. |
-| **Edge Locations** | Sites deployed in major cities and highly populated areas to provide content delivery network (CDN) services. | Reduced latency and higher performance for end-users. |
-| **Wavelength Zones** | Infrastructure deployments that embed AWS compute and storage services within telecommunications providers' data centers at the edge of the 5G network. | Ultra-low latency applications for mobile and connected devices. |
+| **Regions** | Geographic locations around the world hosting AWS services. | US East (N. Virginia), Europe (Ireland), Asia Pacific (Sydney) |
+| **Availability Zones** | Isolated data centers within each region to provide fault tolerance and stability. | Multiple AZs per region, each with independent power, cooling, and physical security |
+| **CloudFront POPs** | Global network locations that cache content closer to users to reduce latency. | Over 600 POPs worldwide |
+| **Regional Edge Caches** | Caching layers that sit between the origin server and the global edge locations. | Located in strategic regions to optimize content delivery |
+| **Local Zones** | Extensions of AWS Regions placed closer to end-users to provide single-digit millisecond latency. | Los Angeles, Boston, Houston |
+| **Direct Connect Locations** | Facilities that allow a dedicated network connection from on-premises to AWS. | Over 135 locations globally |
+| **Wavelength Zones** | Infrastructure deployments within telecommunications providers' data centers at the edge of the 5G network. | Designed for ultra-low latency applications |
+| **Countries & Territories Served** | The reach of AWS services across the globe. | Over 245 countries and territories |
+
+![AWS Global Infrastructure](image-7.png)
+
+AWS continues to expand its infrastructure to provide a robust platform for deploying applications and services globally. For more information, visit the [AWS Global Infrastructure page](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/).
 
 ### Key Features
 
