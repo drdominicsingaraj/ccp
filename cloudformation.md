@@ -59,6 +59,7 @@ The following example shows a JSON-formatted template fragment.
     // set of outputs
   }
 }
+```
 
 ## YAML-Formatted Template Fragment
 
@@ -91,3 +92,6 @@ Resources:
 
 Outputs:
    set of outputs
+
+```
+
