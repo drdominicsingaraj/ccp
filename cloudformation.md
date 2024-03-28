@@ -61,7 +61,7 @@ The following example shows a JSON-formatted template fragment.
 }
 ```
 
-## YAML-Formatted Template Fragment
+### YAML-Formatted Template Fragment
 
 ```yaml
 AWSTemplateFormatVersion: "version date"
@@ -103,9 +103,9 @@ Templates include several major sections. The **Resources** section is the only 
 
 The AWS CloudFormation template version that the template conforms to. The template format version isn't the same as the API or WSDL version. The template format version can change independently of the API and WSDL versions.
 
-## AWS CloudFormation Template Content
+### AWS CloudFormation Template Content
 
-### JSON Format
+#### JSON Format
 
 ```json
 {
@@ -139,7 +139,7 @@ The AWS CloudFormation template version that the template conforms to. The templ
 }
 ```
 
-YAML Format
+#### YAML Format
 
 ```yaml
 
@@ -198,11 +198,11 @@ Rules:
 
 ```
 
-## AWS Rule Functions
+### AWS Rule Functions
 
 In the condition or assertions of a rule, you can use intrinsic functions, such as `Fn::Equals`, `Fn::Not`, and `Fn::RefAll`. The condition property determines if AWS CloudFormation applies the assertions. If the condition evaluates to true, CloudFormation evaluates the assertions to verify whether a parameter value is valid when a provisioned product is created or updated. If a parameter value isn't valid, CloudFormation doesn't create or update the stack. If the condition evaluates to false, CloudFormation doesn't check the parameter value and proceeds with the stack operation.
 
-### Functions
+#### Functions
 
 - `Fn::And`
 - `Fn::Contains`
@@ -217,7 +217,7 @@ In the condition or assertions of a rule, you can use intrinsic functions, such 
 - Supported Functions
 - Supported Attributes
 
-## Mappings (optional)
+### Mappings (optional)
 
 A mapping of keys and associated values that you can use to specify conditional parameter values, similar to a lookup table. You can match a key to a corresponding value by using the `Fn::FindInMap` intrinsic function in the Resources and Outputs sections.
 
@@ -331,7 +331,8 @@ Resources:
 
 ```
 
-Outputs (optional)
+### Outputs (optional)
+
 Describes the values that are returned whenever you view your stack’s properties. For example, you can declare an output for an S3 bucket name and then call the aws cloudformation describe-stacks AWS CLI command to view the name.
 
 ```yaml
