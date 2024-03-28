@@ -30,6 +30,7 @@ A template is a JSON- or YAML-formatted text file that describes your AWS infras
 
 The following example shows a JSON-formatted template fragment.
 
+```json
 {
   "AWSTemplateFormatVersion" : "version date",
   "Description" : "JSON string",
@@ -61,6 +62,7 @@ The following example shows a JSON-formatted template fragment.
 
 ## YAML-Formatted Template Fragment
 
+```yaml
 AWSTemplateFormatVersion: "version date"
 
 Description:
