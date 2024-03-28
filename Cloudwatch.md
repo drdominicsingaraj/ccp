@@ -41,29 +41,35 @@ For detailed instructions on manually creating or editing the CloudWatch agent c
 
 ### Installation
 
-To install and run the CloudWatch agent on your servers:
-
-1. Attach an IAM role or IAM user to the server.
-2. Download the CloudWatch agent package using an S3 download link.
-3. Install the package using the command line.
-
-For step-by-step installation guidance, refer to the [installation instructions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-commandline-fleet.html).
-
-### Systems Manager & Instance Configuration
+#### Systems Manager & Instance Configuration
 
 Before you can use Systems Manager to install the CloudWatch agent, you must make sure that the instance is configured correctly for Systems Manager.
 
-1. **Configure the instance for Systems Manager**: Ensure that the EC2 instance has the necessary IAM role attached and that the Systems Manager agent is installed and running.
-2. **Create IAM roles and users**: Set up the appropriate IAM roles and users for use with the CloudWatch agent.
-3. **Download and configure the CloudWatch agent**: Use Systems Manager to download the CloudWatch agent and configure it according to your needs.
-4. **Install the CloudWatch agent**: Install the CloudWatch agent on your EC2 instance using the configuration you've set.
-5. **Verify the installation**: After installation, check the metrics in the CloudWatch console to ensure that the agent is collecting data as expected.
+**Configure the instance for Systems Manager**: Ensure that the EC2 instance has the necessary IAM role attached and that the Systems Manager agent is installed and running.
+**Create IAM roles and users**: Set up the appropriate IAM roles and users for use with the CloudWatch agent.
 
-## Download the CloudWatch Agent Package Using Systems Manager Run Command
+##### Setting Up the IAM Role for SSM/CloudWatch
+
+1. Initiate an IAM role with a trust policy for EC2.
+2. Attach these managed policies:
+   - `CloudWatchAgentServerPolicy`
+   - `AmazonSSMManagedInstanceCore`
+3. Assign the name `CloudWatchAgentServerRole` to the IAM role and proceed to create it.
+4. Deploy an EC2 instance and associate the newly created IAM role with it.
+
+![IAM Role and permissions](image-20.png)
+
+#### Install and configure CloudWatch agent
+
+**Download and configure the CloudWatch agent**: Use Systems Manager to download the CloudWatch agent and configure it according to your needs.
+**Install the CloudWatch agent**: Install the CloudWatch agent on your EC2 instance using the configuration you've set.
+**Verify the installation**: After installation, check the metrics in the CloudWatch console to ensure that the agent is collecting data as expected.
+
+##### Download the CloudWatch Agent Package Using Systems Manager Run Command
 
 Systems Manager Run Command enables you to manage the configuration of your instances. You specify a Systems Manager document, specify parameters, and execute the command on one or more instances. The SSM Agent on the instance processes the command and configures the instance as specified.
 
-### To download the CloudWatch agent using Run Command
+##### To download the CloudWatch agent using Run Command
 
 1. Open the Systems Manager console at `https://console.aws.amazon.com/systems-manager/`.
 2. In the navigation pane, choose **Run Command**.
@@ -77,6 +83,42 @@ Systems Manager Run Command enables you to manage the configuration of your inst
 9. Choose **Run**.
 10. Optionally, in the Targets and outputs areas, select the button next to an instance name and choose **View output**. Systems Manager should show that the agent was successfully installed.
 
+### Configure the CloudWatch Agent on Your EC2 Instance
+
+To begin the configuration process for the CloudWatch agent on your EC2 instance, follow these steps:
+
+**Install `collectd`**:
+   Execute the command below to install the `collectd` monitoring utility:
+
+   ```bash
+   sudo amazon-linux-extras install collectd
+   ```
+
+#### Run the Configuration Wizard
+
+To start the CloudWatch agent configuration wizard, execute the following command on your EC2 instance:
+
+```bash
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
+```
+
+#### Specify Log File Collection Path
+
+When the configuration wizard prompts you, enter the following path for additional log file collection:
+/var/log/messages
+
+Apply the configuration by executing:
+
+```bash
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s
+```
+
+### Start the CloudWatch agent service
+
+```bash
+sudo systemctl start amazon-cloudwatch-agent
+```
+
 ![alt text](image-10.png)
 ![alt text](image-11.png)
 ![alt text](image-12.png)
@@ -85,4 +127,5 @@ Systems Manager Run Command enables you to manage the configuration of your inst
 ![alt text](image-15.png)
 ![alt text](image-14.png)
 ![alt text](image-17.png)
-
+![alt text](image-18.png)
+![alt text](image-19.png)
