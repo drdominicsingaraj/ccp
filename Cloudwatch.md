@@ -125,6 +125,8 @@ sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-c
 sudo systemctl start amazon-cloudwatch-agent
 ```
 
+## Reference Screenshots
+
 ![alt text](image-10.png)
 ![alt text](image-11.png)
 ![alt text](image-12.png)
@@ -133,5 +135,8 @@ sudo systemctl start amazon-cloudwatch-agent
 ![alt text](image-15.png)
 ![alt text](image-14.png)
 ![alt text](image-17.png)
+
+## Verify the custom metrics in Cloudwatch console
+
 ![alt text](image-18.png)
 ![alt text](image-19.png)
