@@ -45,9 +45,11 @@ For detailed instructions on manually creating or editing the CloudWatch agent c
 
 Before you can use Systems Manager to install the CloudWatch agent, you must make sure that the instance is configured correctly for Systems Manager.
 
-**Configure the instance for Systems Manager**: Ensure that the EC2 instance has the necessary IAM role attached and that the Systems Manager agent is installed and running.
+**Configure the instance for Systems Manager**:
+Ensure that the EC2 instance has the necessary IAM role attached and that the Systems Manager agent is installed and running.
 
-**Create IAM roles and users**: Set up the appropriate IAM roles and users for use with the CloudWatch agent.
+**Create IAM roles and users**:
+Set up the appropriate IAM roles and users for use with the CloudWatch agent.
 
 ##### Setting Up the IAM Role for SSM/CloudWatch
 
@@ -62,13 +64,13 @@ Before you can use Systems Manager to install the CloudWatch agent, you must mak
 
 #### Install and configure CloudWatch agent
 
-**Download and configure the CloudWatch agent**: 
+**Download and configure the CloudWatch agent**:
 Use Systems Manager to download the CloudWatch agent and configure it according to your needs.
 
-**Install the CloudWatch agent**: 
+**Install the CloudWatch agent**:
 Install the CloudWatch agent on your EC2 instance using the configuration you've set.
 
-**Verify the installation**: 
+**Verify the installation**:
 After installation, check the metrics in the CloudWatch console to ensure that the agent is collecting data as expected.
 
 ##### Download the CloudWatch Agent Package Using Systems Manager Run Command
