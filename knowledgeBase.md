@@ -3,7 +3,7 @@
 **Problem:**
 Encountered issues while running the `terraform init` command in the local machine's terminal.
 
-![TerraformProviderIssue](TerraformProviderIssue.png)
+![TerraformProviderIssue](images/TerraformProviderIssue.png)
 
 **Solution:**
 
