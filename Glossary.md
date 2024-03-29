@@ -10,13 +10,13 @@
 
 Each cloud service model offers different levels of control, flexibility, and management, which can be selected based on the needs of the business or application. IaaS provides the most control but requires more management, PaaS eases the management burden but offers less control, and SaaS offers the least control but is the easiest to use and set up.
 
-![Pizza as a Service Analogy](image-4.png)
+![Pizza as a Service Analogy](images/cloudmodels.png)
 
 [Pizza as a Service 2.0](https://engineering.dunelm.com/pizza-as-a-model-453b838ca165)
 
 ## Shared Responsibility Model
 
-![Shared Responsibility Model](image-6.png)
+![Shared Responsibility Model](images/SharedResponsibilityModel.png)
 
 [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/)
 
@@ -152,7 +152,7 @@ AWS Global Infrastructure encompasses a variety of services and locations worldw
 | **Wavelength Zones** | Infrastructure deployments within telecommunications providers' data centers at the edge of the 5G network. | Designed for ultra-low latency applications |
 | **Countries & Territories Served** | The reach of AWS services across the globe. | Over 245 countries and territories |
 
-![AWS Global Infrastructure](image-7.png)
+![AWS Global Infrastructure](images/GlobalInfrastructure.png)
 
 AWS continues to expand its infrastructure to provide a robust platform for deploying applications and services globally. For more information, visit the [AWS Global Infrastructure page](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/).
 
@@ -203,7 +203,7 @@ A block device mapping that specifies the volumes to attach to the instance when
 
 The following diagram summarizes the AMI lifecycle. After you create and register an AMI, you can use it to launch new instances. (You can also launch instances from an AMI if the AMI owner grants you launch permissions.) You can copy an AMI within the same AWS Region or to different AWS Regions. When you no longer require an AMI, you can deregister it.
 
-![alt text](image-5.png)
+![AMI](ami.png)
 
 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html>
 
@@ -605,7 +605,7 @@ AWS Organizations is an AWS service designed for account management, enabling yo
 3. **Set Up OUs**: Organize your accounts into OUs and assign relevant policies.
 4. **Apply SCPs**: Define and apply SCPs to manage permissions and maintain security standards.
 
-![alt text](image-3.png)
+![AWS Organization](images/Organizations.png)
 <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html>
 
 ## AWS Well-Architected Framework
@@ -800,7 +800,7 @@ For detailed documentation on AWS X-Ray, including how to get started and instru
 - For detailed guidance, refer to the AWS documentation on [Using AWS Lambda with AWS X-Ray] and [AWS Lambda and AWS X-Ray].
 
 Sample:
-![alt text](image-8.png)
+![X-ray](xray.png)
 
 ## Comparison of AWS Analytics Services
 

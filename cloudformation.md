@@ -170,7 +170,7 @@ Ec2Instance:
     ImageId: ami-0ff8a91507f77f867
 ```
 
-![alt text](image-9.png)
+![Cloudformation Stack](images/stackparameters.png)
 
 ```yaml
 

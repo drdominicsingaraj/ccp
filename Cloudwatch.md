@@ -60,7 +60,7 @@ Set up the appropriate IAM roles and users for use with the CloudWatch agent.
 3. Assign the name `CloudWatchAgentServerRole` to the IAM role and proceed to create it.
 4. Deploy an EC2 instance and associate the newly created IAM role with it.
 
-![IAM Role and permissions](image-20.png)
+![IAM Role and permissions](images/cwiamrole.png)
 
 #### Install and configure CloudWatch agent
 
@@ -127,16 +127,16 @@ sudo systemctl start amazon-cloudwatch-agent
 
 ## Reference Screenshots
 
-![alt text](image-10.png)
-![alt text](image-11.png)
-![alt text](image-12.png)
-![alt text](image-13.png)
-![alt text](image-16.png)
-![alt text](image-15.png)
-![alt text](image-14.png)
-![alt text](image-17.png)
+![SSMRunCommand-AWSPackage ](images/SSMRunCommand-AWSPackage.png)
+![SSMRunCommand-Parameters](images/SSMRunCommand-Parameters.png)
+![SSMRunCommand-TargetSelection](images/SSMRunCommand-TargetSelection.png)
+![SSMRunCommand-OutputOptions](images/SSMRunCommand-OutputOptions.png)
+![SSMRunCommand-SNS](images/SSMRunCommand-SNS.png)
+![SSMRunCommand-CLICommand](images/SSMRunCommand-CLICommand.png)
+![SSMRunCommand-Status](images/SSMRunCommand-Status.png)
+![SSMRunCommand-Output](images/SSMRunCommand-Output.png)
 
 ## Verify the custom metrics in Cloudwatch console
 
-![alt text](image-18.png)
-![alt text](image-19.png)
+![Cloudwatch Metrics](cwmetrics.png)
+![Cloudwatch Log groups](loggroups.png)
