@@ -1,4 +1,4 @@
-# Glossary
+# AWS Cloud practitioner Study Guide
 
 ## Cloud Service Models Comparison
 
