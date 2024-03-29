@@ -61,3 +61,44 @@ For more detailed instructions, consult the official AWS documentation or the AW
 - **Review Suggestions**: Evaluate the relevance and accuracy of the suggestions to your coding context.
 - **Check for Updates**: Ensure that the language server, which powers CodeWhisperer’s suggestions, is up-to-date. The AWS Toolkit should handle this automatically.
 
+## Amazon Q
+
+Amazon Q is a generative AI-powered assistant designed for business use. It's part of the AWS (Amazon Web Services) and allows users to create chat applications that can answer questions, provide summaries, generate content, and complete tasks based on data within an enterprise. It integrates with services like Amazon Kendra, S3, SharePoint, and Salesforce, and offers configurable access and security settings to ensure that responses are generated using authorized enterprise data. Currently, Amazon Q is in preview release.
+
+### Usage Examples of Amazon Q
+
+1. **Marketing Management**: A marketing manager could use Amazon Q to transform a press release into a blog post, create a summary of the press release, or draft an email based on the release. Amazon Q can also generate tailored social media prompts to promote stories through various channels.
+
+2. **Business Analysis**: Business analysts might employ Amazon Q to gain quicker, easier data insights by asking it to summarize key points from data reports or visualize data trends.
+
+3. **Supply Chain Management**: For supply chain queries, Amazon Q could analyze a company's supply chain and provide suggestions for improvements. For instance, it might suggest alternative shipping routes to avoid delays caused by unforeseen events like weather conditions.
+
+4. **Healthcare Data Analysis**: In the healthcare sector, companies like Gilead Sciences use Amazon Q for faster analysis of extensive data, which can help in making informed decisions.
+
+### Setting Up Amazon Q
+
+Setting up Amazon Q involves several steps to ensure proper integration with your AWS account and development environment. Below is a summary of the process:
+
+### Initial Setup
+
+1. **AWS Account**: Create an AWS account by signing up on the AWS website and completing the verification process.
+
+2. **Secure Root User**: Secure your root user with multi-factor authentication (MFA) and create an administrative user for everyday tasks.
+
+3. **Enable IAM Identity Center**: Manage identities and grant administrative access to users within your organization.
+
+4. **AWS CLI**: Install the AWS Command Line Interface to manage your AWS services.
+
+5. **AWS SDKs**: Download and install the AWS SDKs for use with Amazon Q.
+
+### Configuration
+
+6.**AWS Regions and Endpoints**: Select the AWS Region that fits your needs and set up the necessary endpoints for Amazon Q.
+
+7.**Permissions**: Assign the necessary permissions to use Amazon Q within your AWS account.
+
+8.**AWS Toolkit**: Install the AWS Toolkit in your IDE, available as an extension in Visual Studio Code and JetBrains.
+
+9.**Authenticate**: Authenticate Amazon Q through IAM Identity Center or AWS Builder ID after installing the AWS Toolkit.
+
+For detailed instructions, refer to the official Amazon Q documentation.
