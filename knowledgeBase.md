@@ -3,7 +3,7 @@
 **Problem:**
 Encountered issues while running the `terraform init` command in the local machine's terminal.
 
-![alt text](image.png)
+![TerraformProviderIssue](TerraformProviderIssue.png)
 
 **Solution:**
 
@@ -11,7 +11,7 @@ There were issues fetching latest AMI Id due to Indentation issues in the terraf
 
 ### Select the newest AMI
 
-![alt text](image-1.png)
+![Newest AMI](images/newAMI.png)
 
 **Terraform `fmt`** is used to standardize the format and style of your Terraform configuration files.
 
@@ -40,12 +40,10 @@ This command will show you a side-by-side comparison of the original code and th
 
 For instance, if you had a configuration file with the following content:
 
-![alt text](image-2.png)
+![terraform fmt diff](images/terraformfmtdiff.png)
 
 The - indicates lines that will be removed, and the + indicates lines that will be added, showing you exactly how the indentation and alignment will change to match the canonical format.
 
 ## Issue 2 : Amazon VPC Peering Network Connectivity Issues
 
 [![Amazon VPC Peering Network Connectivity Issues](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDLB2yNDyFmM)](https://www.youtube.com/watch?v=DLB2yNDyFmM)
-
-
