@@ -138,5 +138,5 @@ sudo systemctl start amazon-cloudwatch-agent
 
 ## Verify the custom metrics in Cloudwatch console
 
-![Cloudwatch Metrics](cwmetrics.png)
-![Cloudwatch Log groups](loggroups.png)
+![Cloudwatch Metrics](images/cwmetrics.png)
+![Cloudwatch Log groups](images/loggroups.png)
