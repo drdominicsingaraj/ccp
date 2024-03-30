@@ -110,9 +110,8 @@ The Accenture Velocity team has been utilizing CodeWhisperer to enhance their ar
 - **Accelerated Onboarding**: The tool helps to speed up the onboarding process for novice developers or those working with an unfamiliar codebase.
 - **Enhanced Security**: Security threats are detected early in the development process by integrating security scanning into the developer’s IDE.
 
-```markdown
-[How Accenture is Using Amazon CodeWhisperer to Improve Developer Productivity](https://aws.amazon.com/blogs/machine-learning/how-accenture-is-using-amazon-codewhisperer-to-improve-developer-productivity/)
-```
+**Reference**:
+<https://aws.amazon.com/blogs/machine-learning/how-accenture-is-using-amazon-codewhisperer-to-improve-developer-productivity/>
 
 ### 10 Ways to Build Applications Faster with Amazon CodeWhisperer
 
@@ -127,10 +126,8 @@ The Accenture Velocity team has been utilizing CodeWhisperer to enhance their ar
 9. **Learning Third-Party Code Libraries Faster**: Accelerate the learning curve for new libraries by using CodeWhisperer to provide examples and explanations.
 10. **Documenting Code**: Improve code documentation with CodeWhisperer's ability to generate comments and explanations for your code.
 
-```markdown
-[10 Ways to Build Applications Faster with Amazon CodeWhisperer](https://aws.amazon.com/blogs/devops/10-ways-to-build-applications-faster-with-amazon-codewhisperer/)
-```
-
+**Reference**:
+<https://aws.amazon.com/blogs/devops/10-ways-to-build-applications-faster-with-amazon-codewhisperer/>
 ___
 
 This strategic move aims to enhance the efficiency of Accenture's development process, allowing the team to devote more attention to critical aspects such as security, quality, and performance.
