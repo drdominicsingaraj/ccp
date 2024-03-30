@@ -53,3 +53,30 @@ Remember, prompt engineering is as much an art as it is a science. Experimentati
 - **Zero-shot**: Start without examples and see how the model performs.
 - **Few-shot**: Provide a couple of examples if zero-shot doesn't work.
 - **Fine-tune**: If necessary, fine-tune the model with more examples.
+
+### Zero-Shot Prompting
+
+Zero-shot prompting is when you provide a prompt to the model without any prior examples for the specific task you're asking it to perform. The model uses its pre-trained knowledge to generate a response. It's like asking someone to perform a task they haven't done before, but they use their general knowledge to attempt it.
+
+**Example**:
+**Prompt**: "Explain the theory of relativity."
+**Model's Response**: The model draws on its pre-existing knowledge to explain the theory without any prior examples.
+
+### Few-Shot Prompting
+
+Few-shot prompting involves giving the model a few examples of the task at hand before asking it to perform a similar task. This helps the model understand the context and the type of response expected. It's akin to giving someone a quick lesson or a few examples before they try something new.
+
+**Example**:
+**Prompt**: "Here are two summaries of scientific papers. Now, summarize this third paper in a similar style."
+**Model's Response**: The model uses the structure and style of the provided summaries to create a new summary for the third paper.
+
+### Fine-Tuning
+
+Fine-tuning is a more involved process where the model is trained further on a specific set of data. This process adjusts the model's parameters to perform better on tasks similar to the new examples it has been given. It's like practicing with more examples to get better at a particular task.
+
+**Example**:
+**Scenario**: A company wants to use a language model to answer customer service inquiries in the tone of their brand.
+**Process**: They provide the model with hundreds of examples of past customer service interactions.
+**Outcome**: The model's responses are fine-tuned to reflect the company's specific brand tone and style.
+
+These methods are used in prompt engineering to guide the model towards generating the desired output. Zero-shot can be useful when the task is general and falls within the model's pre-trained capabilities. Few-shot is helpful when you need the model to understand a specific format or context. Fine-tuning is used for specialized tasks where the model needs to adapt to new information or a particular style.
