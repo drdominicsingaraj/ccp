@@ -1,6 +1,25 @@
 # Generative-AI & AWS
 
-## AWS's Perspective
+## Machine Learning
+
+Machine learning is a subfield of artificial intelligence (AI) that enables computers to learn from and make decisions based on data. Here's an overview of the concept:
+
+### What is Machine Learning?
+
+- **Definition**: Machine learning is the development of computer systems that can learn and adapt without following explicit instructions by using algorithms and statistical models to analyze and draw inferences from patterns in data.
+- **Goal**: The aim is to allow machines to perform tasks requiring human intelligence, such as speech recognition, language translation, or decision-making.
+
+### How Does it Work?
+
+1. **Data Input**: Feed the machine learning algorithms with data.
+2. **Learning**: The algorithms learn from the data by identifying patterns and features.
+3. **Prediction**: Once trained, the algorithms can make predictions or decisions when presented with new data.
+
+### Applications
+
+- Machine learning is used in various applications, including recommendation systems, fraud detection, and more. It's a dynamic field that's continually expanding the capabilities of machines.
+
+## Gen. AI from AWS's Perspective
 
 Generative AI refers to machine learning models capable of generating new content or data that mirrors the training data but is not identical. AWS highlights Generative AI's potential to enhance productivity, create unique experiences, and foster rapid innovation across various sectors. AWS provides access to leading foundation models, enterprise-grade security, and privacy, enabling organizations to develop and scale Generative AI applications tailored to their specific data and use cases.
 
@@ -72,6 +91,41 @@ For more detailed instructions, consult the official AWS documentation or the AW
 - **Trigger Suggestions Manually**: If you want to invoke CodeWhisperer manually, you can use the shortcut `Ctrl + Space` (or `Cmd + Space` on macOS) to trigger suggestions.
 - **Review Suggestions**: Evaluate the relevance and accuracy of the suggestions to your coding context.
 - **Check for Updates**: Ensure that the language server, which powers CodeWhisperer’s suggestions, is up-to-date. The AWS Toolkit should handle this automatically.
+
+___
+
+### Improving Developer Productivity with Amazon CodeWhisperer at Accenture
+
+Accenture has integrated Amazon CodeWhisperer into their software engineering best practices, particularly within their Velocity platform. Balakrishnan Viswanathan, Senior Manager of Tech Architecture at Accenture, highlights the impact of this integration:
+
+"**Accenture is using Amazon CodeWhisperer to accelerate coding as part of our software engineering best practices initiative in our Velocity platform**," says Viswanathan. "**The Velocity team was looking for ways to improve developer productivity. After searching for multiple options, we came across Amazon CodeWhisperer to reduce our development efforts by up to 30% and we are now focusing more on improving security, quality, and performance.**"
+
+### Benefits of CodeWhisperer from Accenture point of view
+
+The Accenture Velocity team has been utilizing CodeWhisperer to enhance their artificial intelligence (AI) and machine learning (ML) projects. The benefits they've observed include:
+
+- **Efficiency**: The team spends less time on boilerplate and repetitive code patterns, allowing more focus on building high-quality software.
+- **Empowerment**: CodeWhisperer enables developers to use AI responsibly to create syntactically correct and secure applications.
+- **Function Generation**: Developers can generate entire functions and logical code blocks without the need to search for and customize snippets from the web.
+- **Accelerated Onboarding**: The tool helps to speed up the onboarding process for novice developers or those working with an unfamiliar codebase.
+- **Enhanced Security**: Security threats are detected early in the development process by integrating security scanning into the developer’s IDE.
+
+### 10 Ways to Build Applications Faster with Amazon CodeWhisperer
+
+1. **Typing Less**: Reduce the amount of manual coding by leveraging CodeWhisperer's ability to understand and generate code.
+2. **Generating Functions Using Code**: Automatically generate functions based on the code you've already written.
+3. **Generating Functions Using Comments**: Use natural language comments to guide CodeWhisperer in creating functions that match your specifications.
+4. **Generating Classes**: Quickly create new classes with CodeWhisperer's assistance, speeding up the development of complex structures.
+5. **Implementing Algorithms**: Implement algorithms efficiently with CodeWhisperer's help, saving time on problem-solving and coding.
+6. **Writing Unit Tests**: Generate unit tests automatically to ensure your code works as intended, leading to a more reliable application.
+7. **Creating Sample Data**: Easily create sample data for testing and development purposes.
+8. **Simplifying Regular Expressions**: Simplify the creation and understanding of complex regular expressions with CodeWhisperer's guidance.
+9. **Learning Third-Party Code Libraries Faster**: Accelerate the learning curve for new libraries by using CodeWhisperer to provide examples and explanations.
+10. **Documenting Code**: Improve code documentation with CodeWhisperer's ability to generate comments and explanations for your code.
+
+___
+
+This strategic move aims to enhance the efficiency of Accenture's development process, allowing the team to devote more attention to critical aspects such as security, quality, and performance.
 
 ## Amazon Q
 
