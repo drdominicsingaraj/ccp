@@ -32,29 +32,6 @@ Prompt engineering is the process of crafting inputs that elicit the desired out
 
 Remember, prompt engineering is as much an art as it is a science. Experimentation and iteration are key to finding the most effective prompts.
 
-## Prompt Engineering Best Practices
-
-Effective prompt engineering is crucial for eliciting the desired responses from AI models. Here are some best practices to follow:
-
-## Clarity and Specificity
-
-- **Be Clear**: Write instructions that are easy to understand.
-- **Be Specific**: Provide detailed descriptions of what you want the model to do.
-
-## Structuring Prompts
-
-- **Use Delimiters**: Separate instructions and context with `###` or triple quotes `"""`.
-- **Provide Examples**: Show the model exactly what you're looking for.
-
-## Context and Detail
-
-- **Add Context**: Give the model enough information to understand the task.
-- **Include Details**: Specify the desired context, outcome, length, format, style, etc.
-
-## Output Formatting
-
-- **Articulate Desired Format**: Use examples to show the model how you want the information presented.
-
 ## Iterative Approach
 
 - **Zero-shot**: Start without examples and see how the model performs.
