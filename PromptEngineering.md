@@ -29,27 +29,18 @@ Ingredients: Chicken, tomatoes, basil, pasta.
 
 ## Strategies for Better Results
 
-### Write Clear Instructions
+| Aspect                | Details                                                  |
+| --------------------- | -------------------------------------------------------- |
+| Write Clear Instructions | - Be specific about what you want the model to do.       |
+|                         | - Provide examples if possible.                          |
+|                         | - Use delimiters to separate different parts of the prompt. |
+| Provide Reference Text | - Supplying reference material can guide the model to give more accurate responses. |
+|                         | - Ask the model to use the reference text in its answers. |
+| Break Down Complex Tasks | - Simplify tasks into smaller, manageable steps.         |
+|                         | - Use the output of one task as the input for the next.   |
+| Allow Time for "Thinking" | - Encourage the model to reason through a problem before providing an answer. |
 
-- Be specific about what you want the model to do.
-- Provide examples if possible.
-- Use delimiters to separate different parts of the prompt.
-
-### Provide Reference Text
-
-- Supplying reference material can guide the model to give more accurate responses.
-- Ask the model to use the reference text in its answers.
-
-### Break Down Complex Tasks
-
-- Simplify tasks into smaller, manageable steps.
-- Use the output of one task as the input for the next.
-
-### Allow Time for "Thinking"
-
-- Encourage the model to reason through a problem before providing an answer.
-
-## Tactics for Prompt Engineering
+### Tactics for Prompt Engineering
 
 - **Include Details**: The more context you provide, the better the model's response.
 - **Adopt a Persona**: Ask the model to assume a specific role for more tailored responses.
