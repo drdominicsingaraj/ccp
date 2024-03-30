@@ -1,0 +1,33 @@
+# Prompt Engineering Guide
+
+Prompt engineering is the process of crafting inputs that elicit the desired outputs from AI models, particularly language models like GPT-4. Below are some strategies and tactics for effective prompt engineering.
+
+## Strategies for Better Results
+
+### Write Clear Instructions
+
+- Be specific about what you want the model to do.
+- Provide examples if possible.
+- Use delimiters to separate different parts of the prompt.
+
+### Provide Reference Text
+
+- Supplying reference material can guide the model to give more accurate responses.
+- Ask the model to use the reference text in its answers.
+
+### Break Down Complex Tasks
+
+- Simplify tasks into smaller, manageable steps.
+- Use the output of one task as the input for the next.
+
+### Allow Time for "Thinking"
+
+- Encourage the model to reason through a problem before providing an answer.
+
+## Tactics for Prompt Engineering
+
+- **Include Details**: The more context you provide, the better the model's response.
+- **Adopt a Persona**: Ask the model to assume a specific role for more tailored responses.
+- **Specify Output Length**: If you need a concise or detailed answer, let the model know.
+
+Remember, prompt engineering is as much an art as it is a science. Experimentation and iteration are key to finding the most effective prompts.
