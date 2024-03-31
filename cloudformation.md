@@ -379,6 +379,8 @@ Remember to use the `NoEcho` property for sensitive information like passwords t
 
 For a command-line approach, you can use the `aws cloudformation create-stack` command with the necessary parameters and template location.
 
+![alt text](images/CF.png)
+
 ### AWS Command Line Interface
 
 To set up an Apache web server using AWS CloudFormation via the AWS CLI, you'll need to create a CloudFormation template that defines the resources, and then use the CLI to create a stack with that template.
@@ -515,10 +517,10 @@ Please ensure you have the necessary permissions to create these resources and m
 
 Use sample AWS CloudFormation templates to learn how to declare specific AWS resources or solve a particular use case. We recommend that you use sample templates as a starting point for creating your own templates, not for launching production-level environments. Before launching a template, always review the resources that it will create and the permissions it requires.
 
-![Cloudformation Sample Templates](images/cftemplates.png)
-
-Reference :
+Reference:
 
 ```markdown
 [AWS CloudFormation Templates](https://github.com/awslabs/aws-cloudformation-templates.git)
 ```
+
+![Cloudformation Sample Templates](images/cftemplates.png)
