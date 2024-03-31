@@ -363,7 +363,7 @@ There are several ways to create an AWS CloudFormation stack, each suited to dif
 | **AWS CloudFormation Templates** | Start with a sample template or create your own to define the resources you want to provision and manage as a stack. |
 | **AWS Service Catalog** | Create a stack as part of provisioning a product if you have predefined products in the AWS Service Catalog. |
 
-### AWS CloudFormation stack using AWS Management Console
+### AWS Management Console
 
 | Step | Action |
 | --- | --- |
@@ -379,7 +379,7 @@ Remember to use the `NoEcho` property for sensitive information like passwords t
 
 For a command-line approach, you can use the `aws cloudformation create-stack` command with the necessary parameters and template location.
 
-### AWS CloudFormation stack using AWS Command Line Interface
+### AWS Command Line Interface
 
 To set up an Apache web server using AWS CloudFormation via the AWS CLI, you'll need to create a CloudFormation template that defines the resources, and then use the CLI to create a stack with that template.
 
@@ -429,7 +429,7 @@ Replace `MyApacheWebServerStack` with your desired stack name. The `--template-b
 
 Please ensure you have the AWS CLI installed and configured with the necessary permissions to create these resources. Also, replace the `ImageId` with a valid Amazon Linux AMI ID for your AWS region.
 
-### AWS CloudFormation stack using AWS SDK
+### AWS SDK (Boto3)
 
 To set up an Apache web server using the AWS CloudFormation SDK, you’ll need to write a script that utilizes the SDK to interact with AWS CloudFormation. Below is an example in Python using the Boto3 library, which is the AWS SDK for Python.
 
@@ -510,3 +510,15 @@ Replace `YOUR_ACCESS_KEY`, `YOUR_SECRET_KEY`, and `YOUR_REGION` with your AWS cr
 This script initializes a session with your AWS credentials, creates a CloudFormation client, defines a template for an Apache web server, and then creates a stack with that template.
 
 Please ensure you have the necessary permissions to create these resources and manage stacks in AWS CloudFormation.
+
+## AWS CloudFormation Sample Templates
+
+Use sample AWS CloudFormation templates to learn how to declare specific AWS resources or solve a particular use case. We recommend that you use sample templates as a starting point for creating your own templates, not for launching production-level environments. Before launching a template, always review the resources that it will create and the permissions it requires.
+
+![Cloudformation Sample Templates](images/cftemplates.png)
+
+Reference :
+
+```markdown
+[AWS CloudFormation Templates](https://github.com/awslabs/aws-cloudformation-templates.git)
+```
