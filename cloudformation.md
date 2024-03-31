@@ -363,7 +363,7 @@ There are several ways to create an AWS CloudFormation stack, each suited to dif
 | **AWS CloudFormation Templates** | Start with a sample template or create your own to define the resources you want to provision and manage as a stack. |
 | **AWS Service Catalog** | Create a stack as part of provisioning a product if you have predefined products in the AWS Service Catalog. |
 
-### Steps to create an AWS CloudFormation stack using AWS Management Console
+### AWS CloudFormation stack using AWS Management Console
 
 | Step | Action |
 | --- | --- |
@@ -379,7 +379,7 @@ Remember to use the `NoEcho` property for sensitive information like passwords t
 
 For a command-line approach, you can use the `aws cloudformation create-stack` command with the necessary parameters and template location.
 
-### Steps to create an AWS CloudFormation stack using AWS Command Line Interface
+### AWS CloudFormation stack using AWS Command Line Interface
 
 To set up an Apache web server using AWS CloudFormation via the AWS CLI, you'll need to create a CloudFormation template that defines the resources, and then use the CLI to create a stack with that template.
 
@@ -428,3 +428,85 @@ aws cloudformation create-stack --stack-name MyApacheWebServerStack --template-b
 Replace `MyApacheWebServerStack` with your desired stack name. The `--template-body` parameter points to the file path of your CloudFormation template.
 
 Please ensure you have the AWS CLI installed and configured with the necessary permissions to create these resources. Also, replace the `ImageId` with a valid Amazon Linux AMI ID for your AWS region.
+
+### AWS CloudFormation stack using AWS SDK
+
+To set up an Apache web server using the AWS CloudFormation SDK, you’ll need to write a script that utilizes the SDK to interact with AWS CloudFormation. Below is an example in Python using the Boto3 library, which is the AWS SDK for Python.
+
+First, make sure you have Boto3 installed:
+
+`pip install boto3`
+
+Then, you can use the following Python script as a starting point:
+
+```python
+import boto3
+
+# Initialize a session using your AWS credentials
+aws_session = boto3.Session(
+    aws_access_key_id='YOUR_ACCESS_KEY',
+    aws_secret_access_key='YOUR_SECRET_KEY',
+    region_name='YOUR_REGION'
+)
+
+# Create a CloudFormation client
+cf_client = aws_session.client('cloudformation')
+
+# Define the CloudFormation template for setting up an Apache web server
+apache_web_server_template = """
+AWSTemplateFormatVersion: '2010-09-09'
+Description: A simple AWS CloudFormation template to deploy an Apache web server.
+
+Resources:
+  WebServerInstance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      ImageId: 'ami-0abcdef1234xxxxxx' # Replace with a valid Amazon Linux AMI ID for your region
+      InstanceType: t2.micro
+      SecurityGroups:
+        - Ref: WebServerSecurityGroup
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          yum update -y
+          yum install -y httpd
+          systemctl start httpd
+          systemctl enable httpd
+          echo "Hello World from $(hostname -f)" > /var/www/html/index.html
+
+  WebServerSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Enable HTTP access
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '80'
+          ToPort: '80'
+          CidrIp: 0.0.0.0/0
+"""
+
+# Create the CloudFormation stack
+response = cf_client.create_stack(
+    StackName='ApacheWebServerStack',
+    TemplateBody=apache_web_server_template,
+    Parameters=[
+        {
+            'ParameterKey': 'KeyName',
+            'ParameterValue': 'your-key-pair-name'
+        },
+    ],
+    TimeoutInMinutes=123,
+    Capabilities=[
+        'CAPABILITY_IAM', 'CAPABILITY_NAMED_IAM'
+    ],
+    OnFailure='ROLLBACK'
+)
+
+print(response)
+```
+
+Replace `YOUR_ACCESS_KEY`, `YOUR_SECRET_KEY`, and `YOUR_REGION` with your AWS credentials and desired region. Also, replace `ami-0abcdef1234xxxxxx` with a valid Amazon Linux AMI ID for your region and `your-key-pair-name` with your EC2 key pair name.
+
+This script initializes a session with your AWS credentials, creates a CloudFormation client, defines a template for an Apache web server, and then creates a stack with that template.
+
+Please ensure you have the necessary permissions to create these resources and manage stacks in AWS CloudFormation.
