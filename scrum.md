@@ -14,6 +14,10 @@ The process starts with establishing and perpetually enhancing the **product bac
 **Next, Plan Your Sprint:**
 A designated period in Scrum dedicated to accomplishing a particular collection of tasks or features within a set duration.
 
+```markdown
+![Scrum Process](https://www.neonrain.com/wp-content/uploads/2017/02/scrum_process_afa_5000.jpg "Scrum Process Diagram")
+```
+
 | Key Ceremonies | Activities |
 |----------------|------------|
 | **Sprint Planning** | - Evaluate the product backlog<br>- Define and agree on sprint objectives<br>- Select items from the backlog for the sprint<br>- Formulate a sprint backlog |
