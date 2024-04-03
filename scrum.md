@@ -28,4 +28,4 @@ For Scrum to be effective, it's essential to concentrate on teamwork, continuous
 
 I Love Lucy: A Colorized Celebration - "Job Switching" clip
 
-[![I Love Lucy: A Colorized Celebration - "Job Switching" clip](https://youtu.be/K3axU2b0dDk?si=20V6HVKbDl4OeEht)](https://youtu.be/K3axU2b0dDk?si=20V6HVKbDl4OeEht)
+[![I Love Lucy: A Colorized Celebration - "Job Switching" clip]](https://youtu.be/K3axU2b0dDk?si=20V6HVKbDl4OeEht)
