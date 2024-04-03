@@ -14,3 +14,5 @@ This certification serves as an entry point for cloud knowledge validation and a
 
 Note:
 I crafted this material to support my cherished students, drawing upon AWS documentation and employing generative AI tools to compile the information.
+
+I will be adding the references shortly. My intention is to assist people who are in need. 
