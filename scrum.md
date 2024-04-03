@@ -1,14 +1,18 @@
 # Agile and DevOps
 
-Agile is a set of principles for software development under which requirements and solutions evolve through the collaborative effort of self-organizing cross-functional teams. It advocates adaptive planning, evolutionary development, early delivery, and continual improvement, and it encourages rapid and flexible response to change1.
+Agile is a set of principles for software development under which requirements and solutions evolve through the collaborative effort of self-organizing cross-functional teams. It advocates adaptive planning, evolutionary development, early delivery, and continual improvement, and it encourages rapid and flexible response to change.
 
-DevOps, on the other hand, is a set of practices that combines software development (Dev) and IT operations (Ops). Its goal is to shorten the systems development life cycle and provide continuous delivery with high software quality2. DevOps is considered an extension of Agile principles beyond just the boundaries of the code to the entire delivered service.
+DevOps, on the other hand, is a set of practices that combines software development (Dev) and IT operations (Ops). Its goal is to shorten the systems development life cycle and provide continuous delivery with high software quality. DevOps is considered an extension of Agile principles beyond just the boundaries of the code to the entire delivered service.
 
 Here’s a brief overview of how they interrelate:
 
-Agile methods and practices: Agile isn’t a single methodology but a mindset that drives an approach to software development. It includes various methods like Scrum, which is the most common Agile framework. Agile practices involve techniques applied during phases of the software development lifecycle, such as Continuous Integration (CI), where code changes are integrated into the main branch frequently1.
+**Agile methods and practices**:
 
-DevOps and Agile: DevOps can be seen as Agile applied beyond the software team. It extends the Agile principles to include not just project management and software development but also the ongoing operations of the software after it’s been deployed. This creates a more holistic approach to the lifecycle of software2.
+Agile isn’t a single methodology but a mindset that drives an approach to software development. It includes various methods like Scrum, which is the most common Agile framework. Agile practices involve techniques applied during phases of the software development lifecycle, such as Continuous Integration (CI), where code changes are integrated into the main branch frequently.
+
+**DevOps and Agile**:
+
+DevOps can be seen as Agile applied beyond the software team. It extends the Agile principles to include not just project management and software development but also the ongoing operations of the software after it’s been deployed. This creates a more holistic approach to the lifecycle of software.
 
 Both Agile and DevOps focus on collaboration, efficiency, and improving the end product through continuous testing, development, and feedback. They are not mutually exclusive and are often implemented together to enhance and streamline the process of software delivery.
 
