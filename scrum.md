@@ -14,9 +14,8 @@ The process starts with establishing and perpetually enhancing the **product bac
 **Next, Plan Your Sprint:**
 A designated period in Scrum dedicated to accomplishing a particular collection of tasks or features within a set duration.
 
-```markdown
-![Scrum Process](https://www.neonrain.com/wp-content/uploads/2017/02/scrum_process_afa_5000.jpg "Scrum Process Diagram")
-```
+![Scrum Process](https://www.neonrain.com/wp-content/uploads/2017/02/scrum_process_afa_5000.jpg)
+Reference : <https://www.neonrain.com/wp-content/uploads/2017/02/scrum_process_afa_5000.jpg>
 
 | Key Ceremonies | Activities |
 |----------------|------------|
