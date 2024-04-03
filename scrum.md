@@ -1,7 +1,6 @@
 # Scrum
 
-```text
-
+```markdown
 The Scrum framework has transformed the way products are developed by adopting an agile methodology that prioritizes teamwork and flexibility, leading to quicker deliveries that are more aligned with customer needs.
 
 The process starts with establishing and perpetually enhancing the **product backlog**—a flexible, ordered compilation of features and necessities that adjusts to changing customer demands and project goals.
