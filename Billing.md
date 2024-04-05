@@ -56,3 +56,25 @@ The dashboard also includes tools like AWS Cost Explorer for more detailed analy
 - **Cloud Financial Management Guide**: Learn best practices and strategies for cloud financial management to optimize your AWS spending.
 
 The console is designed to seamlessly transition from insights to action, with clear calls to action and links to the appropriate tools for managing your AWS cloud finances. It's a comprehensive tool for gaining visibility into your spending trends, prioritizing actions to manage costs, and implementing best practices for cloud financial management.
+
+## AWS billing and cost management best practices
+
+1. **Understand AWS Billing**: Familiarize yourself with the AWS Cost Management tools to effectively track and manage your costs.
+
+2. **Set Budgets**: Use AWS Budgets to set custom budgets that alert you when costs or usage exceed your predefined thresholds.
+
+3. **Control Access**: Ensure that only authorized users have access to billing information and the ability to create budgets and alarms.
+
+4. **Use Tags for Allocation**: Implement cost allocation tags to organize your costs by teams, projects, or environments.
+
+5. **Optimize Costs**: Regularly review and analyze your costs with AWS Cost Explorer to identify opportunities for savings.
+
+6. **Monitor Free Tier Usage**: Keep an eye on your AWS Free Tier usage to avoid unexpected charges.
+
+7. **Implement Anomaly Detection**: Set up AWS Cost Anomaly Detection to get alerted about unusual spending patterns.
+
+8. **Utilize Reserved Instances**: Purchase Reserved Instances to save on long-term usage for predictable workloads.
+
+9. **Manage IAM Policies**: Use IAM policies to control the actions that users and services can perform on AWS resources.
+
+10. **Automate Cost Optimization**: Consider automating cost optimization strategies using AWS Lambda and other automation tools.
