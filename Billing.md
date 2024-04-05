@@ -103,6 +103,9 @@ Remember to regularly review your budgets and alerts to ensure they align with y
 
 ## AWS Cloud Financial Management and ROI
 
+![CFM Pillars](images/CFM-pillars.png)
+Reference : <https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2023/02/15/CFM-pillars.png>
+
 1. **Cloud Value Framework**: AWS provides a framework to help customers understand the business value beyond just cost savings. This includes improvements in staff productivity, operational resilience, and business agility.
 
 2. **Cost Optimization**: AWS encourages practices such as selecting the right pricing model, using Reserved Instances, and rightsizing your resources to improve efficiency and reduce costs.
