@@ -57,7 +57,7 @@ The dashboard also includes tools like AWS Cost Explorer for more detailed analy
 
 The console is designed to seamlessly transition from insights to action, with clear calls to action and links to the appropriate tools for managing your AWS cloud finances. It's a comprehensive tool for gaining visibility into your spending trends, prioritizing actions to manage costs, and implementing best practices for cloud financial management.
 
-## AWS billing and cost management best practices
+## Best practices
 
 1. **Understand AWS Billing**: Familiarize yourself with the AWS Cost Management tools to effectively track and manage your costs.
 
@@ -100,3 +100,15 @@ Setting up budget alerts in AWS is a straightforward process that can help you m
 8. **Monitor Alerts**: Once set up, you will receive notifications via email or Amazon SNS topics when your budget thresholds are exceeded or forecasted to be exceeded.
 
 Remember to regularly review your budgets and alerts to ensure they align with your changing needs and usage patterns.
+
+## AWS Cloud Financial Management and ROI
+
+1. **Cloud Value Framework**: AWS provides a framework to help customers understand the business value beyond just cost savings. This includes improvements in staff productivity, operational resilience, and business agility.
+
+2. **Cost Optimization**: AWS encourages practices such as selecting the right pricing model, using Reserved Instances, and rightsizing your resources to improve efficiency and reduce costs.
+
+3. **Financial Operations (FinOps)**: This involves a DevOps-like approach to financial management, focusing on the financial implications of cloud operations to make informed decisions that enhance savings and ROI.
+
+4. **ROI Boost**: Moving to AWS can significantly lower total cost of ownership (TCO) and increase ROI. Customers often experience benefits like faster deployment of new features, reduced operational costs, and increased revenue.
+
+5. **Financial Prudence**: It's crucial to adopt governance and cost optimization strategies to prevent runaway costs and maximize ROI. This includes implementing policies for financial accountability and efficiency.
