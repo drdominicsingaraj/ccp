@@ -23,8 +23,8 @@ AWS Billing and Cost Management is a comprehensive service provided by Amazon We
 
 The AWS Billing Dashboard provides a comprehensive view of your AWS cloud financial management data. It's designed to help you understand your costs and usage, identify trends, and make informed decisions about your AWS spending. Here's a breakdown of its key components:
 
-![Usage Cost Summary](images/costsummary.png)
-Reference : <https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2021/12/02/CID_4.png>
+![Usage Cost Summary](images/cost-lab.png)
+Reference : <https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2020/10/21/cost-lab.png>
 
 | Component          | Description | Additional Information |
 |--------------------|-------------|------------------------|
