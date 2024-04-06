@@ -12,3 +12,10 @@ What are the different ways to connect to an Amazon EC2 instance?
 
 **EC2 serial console**: Allows you to troubleshoot boot and network connectivity issues by providing access to the serial port of the instance. This can be particularly useful when you cannot connect to your instance using SSH1.
 Each method has its own use cases and benefits, and the choice depends on the specific needs and security requirements of your AWS environment.
+
+![Information about your instance](images/connection-prereqs-console2.png)
+
+**Reference**:
+
+<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-to-linux-instance.html>
+<https://www.ecloudture.com/en/the-methods-to-access-ec2-ssh-ec2-instance-connect-system-manager/>
