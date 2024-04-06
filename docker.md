@@ -13,3 +13,59 @@ Amazon ECS is a fully managed container orchestration service provided by AWS. I
 ## Amazon EKS (Elastic Kubernetes Service)
 
 Amazon EKS is a managed service that makes it easier to run Kubernetes on AWS without needing to install, operate, and maintain your own Kubernetes control plane. It automates the deployment, scaling, and management of containerized applications and integrates with AWS services for secure networking, monitoring, and scaling.
+
+Certainly! Here's the markdown code for the instructions on installing Docker on an Amazon EC2 instance with the Amazon Linux AMI:
+
+```markdown
+To install Docker on an Amazon EC2 instance with the Amazon Linux AMI, follow these steps:
+
+1. **Connect to your EC2 instance using SSH:**
+
+   ```bash
+   ssh ec2-user@<your-ec2-ip-address>
+   ```
+
+2. **Update the installed packages and package cache on your instance:**
+
+   ```bash
+   sudo yum update -y
+   ```
+
+3. **Install Docker:**
+
+   ```bash
+   sudo yum install docker -y
+   ```
+
+4. **Start the Docker service:**
+
+   ```bash
+   sudo service docker start
+   ```
+
+5. **Add the `ec2-user` to the Docker group to execute Docker commands without using `sudo`:**
+
+   ```bash
+   sudo usermod -a -G docker ec2-user
+   ```
+
+6. **Log out and log back in again to pick up the new Docker group permissions.**
+
+7. **(Optional) Install `docker-compose` using `pip`:**
+
+   ```bash
+   sudo yum install python3-pip
+   pip3 install --user docker-compose
+   ```
+
+8. **Enable the Docker service to start on boot:**
+
+   ```bash
+   sudo systemctl enable docker.service
+   ```
+
+After these steps, Docker should be installed and running on your EC2 instance. You can verify the installation by checking the Docker service status:
+
+```bash
+sudo systemctl status docker.service
+```
