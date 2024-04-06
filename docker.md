@@ -14,10 +14,9 @@ Amazon ECS is a fully managed container orchestration service provided by AWS. I
 
 Amazon EKS is a managed service that makes it easier to run Kubernetes on AWS without needing to install, operate, and maintain your own Kubernetes control plane. It automates the deployment, scaling, and management of containerized applications and integrates with AWS services for secure networking, monitoring, and scaling.
 
-Certainly! Here's the markdown code for the instructions on installing Docker on an Amazon EC2 instance with the Amazon Linux AMI:
-
 ```markdown
 To install Docker on an Amazon EC2 instance with the Amazon Linux AMI, follow these steps:
+```
 
 1. **Connect to your EC2 instance using SSH:**
 
