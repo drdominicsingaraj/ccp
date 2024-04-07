@@ -23,6 +23,7 @@ Consistent formatting makes it easier for developers to collaborate and maintain
 
 **Usage:**
 You can use `terraform fmt` with the following options:
+
 - `-list=false`: Don't list files containing formatting inconsistencies.
 - `-write=false`: Don't overwrite input files (implied by `-check` or when input is STDIN).
 - `-diff`: Display diffs of formatting changes.
