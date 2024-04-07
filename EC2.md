@@ -1,10 +1,6 @@
 # Elastic Compute Cloud
 
-```markdown
-# Amazon EC2 (Elastic Compute Cloud)
-
 Amazon EC2 is a central part of Amazon Web Services (AWS), providing resizable compute capacity in the cloud. It simplifies web-scale cloud computing for developers by offering virtual servers, known as instances, for running applications and workloads.
-```
 
 ## Key Features of Amazon EC2
 
@@ -18,14 +14,11 @@ Amazon EC2 is a central part of Amazon Web Services (AWS), providing resizable c
 | **Amazon EBS Volumes** | Persistent storage using Amazon Elastic Block Store (EBS). |
 | **Regions and Availability Zones** | Physical locations of data centers around the world. Availability Zones are isolated locations within each Region. |
 
-```markdown
-
 EC2 provides scalable computing resources, allowing you to adjust capacity within minutes. You can launch one or thousands of server instances simultaneously and pay only for what you use.
 
 EC2 also offers customizable security groups and networks, compliance with various programs, and the ability to process, store, and transmit credit card data.
 
 For more detailed information, refer to the [official AWS documentation on EC2](https://aws.amazon.com/ec2/).
-```
 
 What are the different ways to connect to an Amazon EC2 instance?
 
