@@ -193,6 +193,46 @@ Remember to replace `your-username`, `repository`, and `tag` with your actual Do
 
 Amazon ECR is a fully managed Docker container registry provided by AWS. It allows developers to store, manage, and deploy Docker container images. It's integrated with Amazon ECS and EKS, simplifying your development to production workflow.
 
+### Pushing a Docker Image to Amazon ECR
+
+To push a Docker image to Amazon ECR, follow these steps:
+
+### Step 1: Create an ECR Repository
+
+Ensure you have an ECR repository to push your image to. If not, create one.
+
+### Step 2: Authenticate Your Docker Client
+
+Authenticate your Docker client to the Amazon ECR registry with the following command:
+
+```bash
+aws ecr get-login-password --region your-region | docker login --username AWS --password-stdin your-aws-account-id.dkr.ecr.your-region.amazonaws.com
+```
+
+Replace `your-region` and `your-aws-account-id` with your specific AWS region and account ID.
+
+### Step 3: Tag Your Docker Image
+
+Tag your local Docker image with the ECR repository URI:
+
+```bash
+docker tag local-image:tag your-aws-account-id.dkr.ecr.your-region.amazonaws.com/repository:tag
+```
+
+### Step 4: Push the Image to ECR
+
+Push the tagged image to your ECR repository:
+
+```bash
+docker push your-aws-account-id.dkr.ecr.your-region.amazonaws.com/repository:tag
+```
+
+Replace `local-image:tag` with your image's name and tag, and `repository:tag` with your ECR repository's name and desired image tag.
+
+For more detailed instructions, refer to the [Amazon ECR documentation](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html).
+
+Please replace `your-region`, `your-aws-account-id`, `local-image:tag`, and `repository:tag` with your actual AWS region, AWS account ID, local Docker image name and tag, and ECR repository name and tag, respectively.
+
 ## Amazon ECS (Elastic Container Service)
 
 Amazon ECS is a fully managed container orchestration service provided by AWS. It allows you to run, manage, and scale containerized applications using Docker containers. ECS can be used with AWS Fargate, which is a serverless compute engine that removes the need to provision and manage servers.
