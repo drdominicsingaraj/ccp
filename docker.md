@@ -237,29 +237,16 @@ Please replace `your-region`, `your-aws-account-id`, `local-image:tag`, and `rep
 
 Amazon ECS is a fully managed container orchestration service that allows you to deploy, manage, and scale containerized applications. Here are its key features:
 
-### Fully Managed Service
-ECS eliminates the need to install and operate your own cluster management infrastructure.
-
-### Container Orchestration
-Handles the deployment, scaling, and management of containers.
-
-### Integration
-Works seamlessly with AWS services like Elastic Load Balancing, Amazon RDS, and Amazon EC2.
-
-### Capacity Providers
-Manages the infrastructure to run containers, with options for both serverless (AWS Fargate) and EC2 instances.
-
-### Scheduling
-Allows you to place containers based on your resource needs and availability requirements.
-
-### Security
-Integrates with AWS Identity and Access Management (IAM) for resource-level control and security.
-
-### Flexibility
-Run tasks and services on a serverless infrastructure or on EC2 instances that you manage.
-
-### ECS Anywhere
-Run ECS in your own data center, providing flexibility to run applications on-premises or in the cloud.
+| Feature | Description |
+|---------|-------------|
+| **Fully Managed Service** | ECS eliminates the need to install and operate your own cluster management infrastructure. |
+| **Container Orchestration** | Handles the deployment, scaling, and management of containers. |
+| **Integration** | Works seamlessly with AWS services like Elastic Load Balancing, Amazon RDS, and Amazon EC2. |
+| **Capacity Providers** | Manages the infrastructure to run containers, with options for both serverless (AWS Fargate) and EC2 instances. |
+| **Scheduling** | Allows you to place containers based on your resource needs and availability requirements. |
+| **Security** | Integrates with AWS Identity and Access Management (IAM) for resource-level control and security. |
+| **Flexibility** | Run tasks and services on a serverless infrastructure or on EC2 instances that you manage. |
+| **ECS Anywhere** | Run ECS in your own data center, providing flexibility to run applications on-premises or in the cloud. |
 
 ECS is designed to work well with Docker containers, making it easier for teams to focus on building their applications rather than managing the underlying infrastructure.
 
@@ -333,20 +320,21 @@ Setting up a website with Amazon ECS involves several steps, including creating 
    - Push the image: `docker push your-account-id.dkr.ecr.your-region.amazonaws.com/my-website:latest`
 
 3. **Create an ECS Cluster**:
-   - Use the AWS CLI: `aws ecs create-cluster --cluster-name my-cluster`
+   Use the AWS CLI: `aws ecs create-cluster --cluster-name my-cluster`
 
 4. **Create a Task Definition**:
-   - Define the task with the necessary details like the image to use, CPU and memory requirements, etc.
+   Define the task with the necessary details like the image to use, CPU and memory requirements, etc.
 
 5. **Create a Service**:
-   - Create a service that runs and maintains a specified number of instances of your task definition: 
+   Create a service that runs and maintains a specified number of instances of your task definition: 
+
    `aws ecs create-service --cluster my-cluster --service-name my-website-service --task-definition my-website-task --desired-count 1 --launch-type FARGATE`
 
 6. **Configure a Load Balancer**:
-   - Set up an Application Load Balancer (ALB) to distribute traffic to your containers.
+   Set up an Application Load Balancer (ALB) to distribute traffic to your containers.
 
 7. **Test Your Deployment**:
-   - Once everything is set up, access your website via the ALB's DNS name.
+   Once everything is set up, access your website via the ALB's DNS name.
 
 Remember to replace placeholder values like `my-website`, `your-region`, `your-account-id`, `my-cluster`, `my-website-service`, and `my-website-task` with your actual Docker image name, AWS region, AWS account ID, ECS cluster name, service name, and task definition, respectively. The AWS CDK (Cloud Development Kit) can also be used to define your cloud infrastructure in a programming language you are familiar with, which simplifies the process of deploying your website on ECS.
 
