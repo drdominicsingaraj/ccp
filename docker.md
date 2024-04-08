@@ -238,42 +238,34 @@ Please replace `your-region`, `your-aws-account-id`, `local-image:tag`, and `rep
 Amazon ECS is a fully managed container orchestration service that allows you to deploy, manage, and scale containerized applications. Here are its key features:
 
 ### Fully Managed Service
-
 ECS eliminates the need to install and operate your own cluster management infrastructure.
 
 ### Container Orchestration
-
 Handles the deployment, scaling, and management of containers.
 
 ### Integration
-
 Works seamlessly with AWS services like Elastic Load Balancing, Amazon RDS, and Amazon EC2.
 
 ### Capacity Providers
-
 Manages the infrastructure to run containers, with options for both serverless (AWS Fargate) and EC2 instances.
 
 ### Scheduling
-
 Allows you to place containers based on your resource needs and availability requirements.
 
 ### Security
-
 Integrates with AWS Identity and Access Management (IAM) for resource-level control and security.
 
 ### Flexibility
-
 Run tasks and services on a serverless infrastructure or on EC2 instances that you manage.
 
 ### ECS Anywhere
-
 Run ECS in your own data center, providing flexibility to run applications on-premises or in the cloud.
 
 ECS is designed to work well with Docker containers, making it easier for teams to focus on building their applications rather than managing the underlying infrastructure.
 
 For more detailed information, refer to the official AWS documentation.
 
-### ECS Implementation
+## ECS Implementation
 
 Implementing Amazon ECS (Elastic Container Service) typically involves setting up a cluster, defining tasks and services, and then running and managing your containers within that environment. Here’s a high-level example of how you might set up a basic ECS deployment:
 
@@ -291,29 +283,39 @@ Update Services: If you need to update your application, you can create a new ta
 **Monitor Your Services**: Use Amazon CloudWatch to monitor the resource utilization of your services.
 Here’s a simple example using the AWS CLI:
 
-#### Step 1: Create an ECS Cluster
+### Step 1: Create an ECS Cluster
 
+```bash
 aws ecs create-cluster --cluster-name my-cluster
+```
 
-#### Step 2: Register a Task Definition
+### Step 2: Register a Task Definition
 
+```bash
 aws ecs register-task-definition --family my-task --container-definitions file://my-container-definition.json
+```
 
-#### Step 3: Launch and Register Container Instances
+### Step 3: Launch and Register Container Instances
 
-#### This step is automatically handled if you're using Fargate.
+### This step is automatically handled if you're using Fargate.
 
-#### Step 4: Create a Service
+### Step 4: Create a Service
 
+```bash
 aws ecs create-service --cluster my-cluster --service-name my-service --task-definition my-task --desired-count 2
+```
 
-#### Step 5: Run Tasks
+### Step 5: Run Tasks
 
+```bash
 aws ecs run-task --cluster my-cluster --task-definition my-task
+```
 
 #### Step 6: Update Services
 
+```bash
 aws ecs update-service --cluster my-cluster --service-name my-service --task-definition new-task-definition
+```
 
 #### Step 7: Monitor Your Services
 
@@ -341,7 +343,8 @@ Setting up a website with Amazon ECS involves several steps, including creating 
    - Define the task with the necessary details like the image to use, CPU and memory requirements, etc.
 
 5. **Create a Service**:
-   - Create a service that runs and maintains a specified number of instances of your task definition: `aws ecs create-service --cluster my-cluster --service-name my-website-service --task-definition my-website-task --desired-count 1 --launch-type FARGATE`
+   - Create a service that runs and maintains a specified number of instances of your task definition: 
+   `aws ecs create-service --cluster my-cluster --service-name my-website-service --task-definition my-website-task --desired-count 1 --launch-type FARGATE`
 
 6. **Configure a Load Balancer**:
    - Set up an Application Load Balancer (ALB) to distribute traffic to your containers.
