@@ -153,7 +153,41 @@ DockerHub is a service provided by Docker that serves as the world's largest con
 
 - Set up webhooks for triggering actions in other services when an image is pushed.
 
-For more information or to start using DockerHub, visit the official website or read the documentation.
+## Pushing a Docker Image to DockerHub
+
+Here's how you can push a Docker image to your DockerHub repository:
+
+### Step 1: Log in to DockerHub
+
+Log in to DockerHub via the command line:
+
+```bash
+docker login --username your-username
+```
+
+You'll be prompted to enter your password.
+
+### Step 2: Tag Your Image
+
+Tag your local image with your DockerHub username and the repository:
+
+```bash
+docker tag local-image:tag your-username/repository:tag
+```
+
+Replace `local-image:tag` with the name of your image and `your-username/repository:tag` with your DockerHub username and repository.
+
+### Step 3: Push the Image
+
+Push the image to DockerHub using the tag you've created:
+
+```bash
+docker push your-username/repository:tag
+```
+
+Replace `your-username/repository:tag` with your DockerHub username and repository.
+
+Remember to replace `your-username`, `repository`, and `tag` with your actual DockerHub username, the name of your repository, and the tag of your image.
 
 ## Amazon ECR (Elastic Container Registry)
 
