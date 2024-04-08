@@ -70,3 +70,78 @@ After these steps, Docker should be installed and running on your EC2 instance. 
 ```bash
 sudo systemctl status docker.service
 ```
+___
+
+```markdown
+## Creating a Custom Docker Image with NGINX
+
+Follow these steps to create a custom Docker image with NGINX:
+
+## Step 1: Create a Directory
+
+Make a new directory for your project and navigate into it:
+
+```bash
+mkdir my-nginx-project
+cd my-nginx-project
+```
+
+## Step 2: Create an index.html
+
+This will be your custom webpage displayed by NGINX.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Custom NGINX</title>
+</head>
+<body>
+    <h1>Welcome to My Custom NGINX Page!</h1>
+</body>
+</html>
+```
+
+Save this as `index.html` in your project directory.
+
+## Step 3: Write the Dockerfile
+
+Create a Dockerfile with the following content:
+
+```dockerfile
+# Use the official NGINX image as a parent image
+FROM nginx:latest
+
+# Copy the index.html file from your local directory to the container
+COPY index.html /usr/share/nginx/html/index.html
+
+# Expose port 80
+EXPOSE 80
+
+# Start NGINX when the container launches
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+## Step 4: Build Your Docker Image
+
+Run the following command in your project directory to build the Docker image:
+
+```bash
+docker build -t my-custom-nginx .
+```
+
+## Step 5: Run Your Container
+
+Start a container using your new image:
+
+```bash
+docker run --name my-nginx-container -d -p 8080:80 my-custom-nginx
+```
+
+## Step 6: Verify Your Deployment
+
+Open a web browser and navigate to `http://localhost:8080` to see your custom NGINX page.
+
+Remember to replace `my-custom-nginx` with the name you want for your Docker image and `my-nginx-container` with the name you want for your container.
+```
+
