@@ -72,12 +72,13 @@ sudo systemctl status docker.service
 ```
 ___
 
-```markdown
-## Creating a Custom Docker Image with NGINX
+## Custom Docker Image
+
+### Creating a Custom Docker Image with NGINX
 
 Follow these steps to create a custom Docker image with NGINX:
 
-## Step 1: Create a Directory
+#### Step 1: Create a Directory
 
 Make a new directory for your project and navigate into it:
 
@@ -86,7 +87,7 @@ mkdir my-nginx-project
 cd my-nginx-project
 ```
 
-## Step 2: Create an index.html
+#### Step 2: Create an index.html
 
 This will be your custom webpage displayed by NGINX.
 
@@ -104,7 +105,7 @@ This will be your custom webpage displayed by NGINX.
 
 Save this as `index.html` in your project directory.
 
-## Step 3: Write the Dockerfile
+#### Step 3: Write the Dockerfile
 
 Create a Dockerfile with the following content:
 
@@ -122,7 +123,7 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
-## Step 4: Build Your Docker Image
+#### Step 4: Build Your Docker Image
 
 Run the following command in your project directory to build the Docker image:
 
@@ -130,7 +131,7 @@ Run the following command in your project directory to build the Docker image:
 docker build -t my-custom-nginx .
 ```
 
-## Step 5: Run Your Container
+#### Step 5: Run Your Container
 
 Start a container using your new image:
 
@@ -138,10 +139,8 @@ Start a container using your new image:
 docker run --name my-nginx-container -d -p 8080:80 my-custom-nginx
 ```
 
-## Step 6: Verify Your Deployment
+#### Step 6: Verify Your Deployment
 
 Open a web browser and navigate to `http://localhost:8080` to see your custom NGINX page.
 
 Remember to replace `my-custom-nginx` with the name you want for your Docker image and `my-nginx-container` with the name you want for your container.
-```
-
