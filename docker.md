@@ -269,19 +269,15 @@ For more detailed information, refer to the official AWS documentation.
 
 Implementing Amazon ECS (Elastic Container Service) typically involves setting up a cluster, defining tasks and services, and then running and managing your containers within that environment. Here’s a high-level example of how you might set up a basic ECS deployment:
 
-**Create an ECS Cluster**: This is where your container instances will live. You can create a cluster using the AWS Management Console or the AWS CLI.
-
-**Define a Task Definition**: This is a blueprint for your application that describes the container and includes information like the image to use, CPU and memory allocations, environment variables, and port mappings.
-
-**Launch and Register Container Instances**: These are the EC2 instances that run the container agent and will be part of your ECS Cluster.
-
-**Create a Service**: This allows you to run and maintain a specified number of instances of a task definition simultaneously in an ECS cluster.
-
-**Run Tasks**: This launches your containers based on the Task Definition within your cluster.
-Update Services: If you need to update your application, you can create a new task definition and update the service to use it.
-
-**Monitor Your Services**: Use Amazon CloudWatch to monitor the resource utilization of your services.
-Here’s a simple example using the AWS CLI:
+| Step | Action | Description |
+|------|--------|-------------|
+| 1 | Create an ECS Cluster | This is where your container instances will live. You can create a cluster using the AWS Management Console or the AWS CLI. |
+| 2 | Define a Task Definition | This is a blueprint for your application that describes the container and includes information like the image to use, CPU and memory allocations, environment variables, and port mappings. |
+| 3 | Launch and Register Container Instances | These are the EC2 instances that run the container agent and will be part of your ECS Cluster. |
+| 4 | Create a Service | This allows you to run and maintain a specified number of instances of a task definition simultaneously in an ECS cluster. |
+| 5 | Run Tasks | This launches your containers based on the Task Definition within your cluster. |
+| 6 | Update Services | If you need to update your application, you can create a new task definition and update the service to use it. |
+| 7 | Monitor Your Services | Use Amazon CloudWatch to monitor the resource utilization of your services. |
 
 ### Step 1: Create an ECS Cluster
 
@@ -297,7 +293,7 @@ aws ecs register-task-definition --family my-task --container-definitions file:/
 
 ### Step 3: Launch and Register Container Instances
 
-### This step is automatically handled if you're using Fargate.
+This step is automatically handled if you're using Fargate.
 
 ### Step 4: Create a Service
 
@@ -318,8 +314,7 @@ aws ecs update-service --cluster my-cluster --service-name my-service --task-def
 ```
 
 #### Step 7: Monitor Your Services
-
-#### Use Amazon CloudWatch from the AWS Management Console or AWS CLI
+Use Amazon CloudWatch from the AWS Management Console or AWS CLI
 
 Remember to replace placeholder values like my-cluster, my-task, my-container-definition.json, and my-service with your actual ECS cluster name, task definitions, container definition files, and service names.
 
@@ -332,7 +327,8 @@ Setting up a website with Amazon ECS involves several steps, including creating 
    - Build your Docker image: `docker build -t my-website .`
 
 2. **Push the Image to Amazon ECR**:
-   - Authenticate Docker to your ECR registry: `aws ecr get-login-password --region your-region | docker login --username AWS --password-stdin your-account-id.dkr.ecr.your-region.amazonaws.com`
+   - Authenticate Docker to your ECR registry:
+   `aws ecr get-login-password --region your-region | docker login --username AWS --password-stdin your-account-id.dkr.ecr.your-region.amazonaws.com`
    - Tag your image: `docker tag my-website:latest your-account-id.dkr.ecr.your-region.amazonaws.com/my-website:latest`
    - Push the image: `docker push your-account-id.dkr.ecr.your-region.amazonaws.com/my-website:latest`
 
