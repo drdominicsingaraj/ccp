@@ -137,21 +137,12 @@ Remember to replace `my-custom-nginx` with the name you want for your Docker ima
 
 DockerHub is a service provided by Docker that serves as the world's largest container registry. Here's what you can do with DockerHub:
 
-### Find and Pull Images
-
-- Access a vast library of community and official images for your projects.
-
-### Push and Store Images
-
-- Upload your custom images for easy distribution and version control.
-
-### Automated Builds
-
-- Connect to GitHub or Bitbucket for automated image builds with code changes.
-
-### Webhooks and Integration
-
-- Set up webhooks for triggering actions in other services when an image is pushed.
+| Feature | Description |
+|---------|-------------|
+| **Find and Pull Images** | Access a vast library of community and official images for your projects. |
+| **Push and Store Images** | Upload your custom images for easy distribution and version control. |
+| **Automated Builds** | Connect to GitHub or Bitbucket for automated image builds with code changes. |
+| **Webhooks and Integration** | Set up webhooks for triggering actions in other services when an image is pushed. |
 
 ## Pushing a Docker Image to DockerHub
 
