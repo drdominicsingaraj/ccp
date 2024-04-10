@@ -1,5 +1,7 @@
 # AWS CLI Commands
 
+## EC2
+
 Comprehensive Linux script that incorporates the creation of a VPC, subnets, an internet gateway, a security group, a network ACL (NACL), and an EC2 instance with the latest Amazon Linux AMI. The script also installs an Apache web server on the EC2 instance.
 
 ```bash
@@ -69,3 +71,132 @@ ssh -i /path/to/your/key.pem ec2-user@$PUBLIC_IP "sudo yum install -y httpd && s
 | **Install Apache** | Once the instance is running, connect via SSH and install the Apache web server. |
 
 Make sure to replace placeholder values like `MyKeyPair` and `/path/to/your/key.pem` with your actual key pair name and private key file path. Also, ensure that your AWS CLI is configured with the necessary permissions to execute these commands. If you encounter any issues, check your IAM user permissions and AWS CLI configuration.
+
+## Cloudformation commands
+
+CloudFormation template in YAML format that sets up a VPC, subnets, an internet gateway, a security group, a network ACL, and an EC2 instance with the latest Amazon Linux AMI. It also includes user data to install and start an Apache web server on the EC2 instance.
+
+### Template
+
+```yaml
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation template for creating a VPC with related resources and an EC2 instance.
+
+Parameters:
+  LatestAmiId:
+    Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+    Default: '/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2'
+
+Resources:
+  MyVPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: '10.0.0.0/16'
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+
+  PublicSubnet:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref MyVPC
+      CidrBlock: '10.0.1.0/24'
+      MapPublicIpOnLaunch: true
+
+  InternetGateway:
+    Type: 'AWS::EC2::InternetGateway'
+
+  GatewayAttachment:
+    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Properties:
+      VpcId: !Ref MyVPC
+      InternetGatewayId: !Ref InternetGateway
+
+  MySecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: 'Enable SSH and HTTP access'
+      VpcId: !Ref MyVPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: '0.0.0.0/0'
+        - IpProtocol: tcp
+          FromPort: '80'
+          ToPort: '80'
+          CidrIp: '0.0.0.0/0'
+
+  MyNetworkAcl:
+    Type: 'AWS::EC2::NetworkAcl'
+    Properties:
+      VpcId: !Ref MyVPC
+
+  InboundNetworkAclEntry:
+    Type: 'AWS::EC2::NetworkAclEntry'
+    Properties:
+      NetworkAclId: !Ref MyNetworkAcl
+      RuleNumber: '100'
+      Protocol: '6'
+      RuleAction: 'allow'
+      Egress: false
+      CidrBlock: '0.0.0.0/0'
+      PortRange:
+        From: '22'
+        To: '22'
+
+  OutboundNetworkAclEntry:
+    Type: 'AWS::EC2::NetworkAclEntry'
+    Properties:
+      NetworkAclId: !Ref MyNetworkAcl
+      RuleNumber: '100'
+      Protocol: '6'
+      RuleAction: 'allow'
+      Egress: true
+      CidrBlock: '0.0.0.0/0'
+      PortRange:
+        From: '0'
+        To: '65535'
+
+  MyEC2Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      ImageId: !Ref LatestAmiId
+      InstanceType: 't2.micro'
+      SecurityGroups:
+        - !Ref MySecurityGroup
+      SubnetId: !Ref PublicSubnet
+      UserData:
+        Fn::Base64: |
+          #!/bin/bash
+          yum update -y
+          yum install -y httpd
+          systemctl start httpd
+          systemctl enable httpd
+```
+
+**Explanation:**
+
+- **Parameters**: Defines the latest Amazon Linux AMI ID using AWS Systems Manager Parameter Store.
+- **Resources**:
+  - **MyVPC**: Creates a VPC with a CIDR block of `10.0.0.0/16`.
+  - **PublicSubnet**: A subnet with a CIDR block of `10.0.1.0/24` that automatically assigns public IP addresses to instances.
+  - **InternetGateway**: An internet gateway to allow communication between instances in the VPC and the internet.
+  - **GatewayAttachment**: Attaches the internet gateway to the VPC.
+  - **MySecurityGroup**: A security group that allows SSH and HTTP traffic.
+  - **MyNetworkAcl**: A network ACL with rules to allow inbound SSH traffic and all outbound traffic.
+  - **MyEC2Instance**: An EC2 instance of type `t2.micro` using the latest Amazon Linux AMI, with user data to install and start an Apache web server.
+
+This template can be deployed using the AWS Management Console, AWS CLI, or AWS CloudFormation API. Make sure to replace the `t2.micro` instance type and other parameters as needed to fit your requirements. The UserData script updates the system and installs the Apache web server, which is then started and enabled to run on boot.
+
+### Create CF Stack
+
+To create a CloudFormation stack with the provided template, you can use the following AWS CLI command:
+
+```bash
+aws cloudformation create-stack --stack-name MyStack --template-body file://path_to_template.yaml --parameters ParameterKey=LatestAmiId,ParameterValue=/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2 --region your-region
+```
+
+Replace `path_to_template.yaml` with the actual file path of your CloudFormation template and `your-region` with the AWS region you're working in. The `--parameters` option specifies the AMI ID parameter, which in this case is set to fetch the latest Amazon Linux AMI ID from the AWS Systems Manager Parameter Store.
+
+Make sure to have the AWS CLI installed and configured with the necessary permissions to execute this command. If you encounter any issues, check your IAM user permissions and AWS CLI configuration.
+
