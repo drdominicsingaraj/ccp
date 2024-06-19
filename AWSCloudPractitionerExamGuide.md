@@ -848,4 +848,14 @@ For more detailed information on these services, you can refer to the official A
 | AWS Fargate               | Abstracts infrastructure for containers    | Low           | Define container specs; Fargate handles the rest | Isolation boundaries for each task or pod | Small to medium-sized projects                 |
 | Amazon ECR                | Securely stores and manages container images | N/A           | N/A           | N/A                  | Integrates well with ECS and Fargate           |
 
+## NACL vs Security Groups (SGs)
 
+| Aspect                  | Security Group (SG)                 | Network Access Control List (NACL) |
+|-------------------------|------------------------------------|------------------------------------|
+| **Scope**                | Operates at instance level (network interface). Explicitly assigned to instances. | Operates at subnet level. Automatically applies to all instances in the associated subnet. |
+| **State**                | Stateful. Return traffic allowed automatically. | Stateless. Must explicitly allow return traffic. |
+| **Rule Types**           | Supports allow rules only. No deny rules. | Supports both allow and deny rules. |
+| **Rule Evaluation Order** | All rules evaluated before allowing traffic. | Evaluates rules in order (stops at first match). |
+| **Occurrence**           | Multiple SGs per instance. | One NACL per subnet. |
+| **Destination in Rules** | Allows CIDR, IP, and other SGs. | Allows only CIDR. |
+| **Defense Order**        | First layer for inbound traffic. | First layer for outbound traffic. |
