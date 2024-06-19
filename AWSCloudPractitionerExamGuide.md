@@ -827,3 +827,17 @@ AWS offers a suite of developer tools for continuous integration and continuous 
 | **AWS CodePipeline** | A continuous delivery service that automates the build, test, and deploy phases of your release process. | Continuous delivery, fast and reliable updates, workflow modeling. | - Automated pipelines. <br> - Integrates with third-party services. <br> - Customizable. |
 
 For more detailed information on these services, you can refer to the official AWS documentation.
+
+## Comparison of AWS Elastic Beanstalk and AWS Lightsail
+
+| Aspect                | Elastic Beanstalk                                       | Lightsail                                                |
+|-----------------------|---------------------------------------------------------|----------------------------------------------------------|
+| Use Case              | Complex and scalable applications                      | Simple workloads, easy setup                            |
+| Control               | More flexibility and control                           | Simplified management console                            |
+| Managed Resources     | Auto-provisions capacity, load balancing, auto-scaling | Fixed RAM, vCPUs, SSD, data transfer, static IP          |
+| Underlying Infrastructure | CloudFormation for EC2, ASG, LB, S3, RDS (optional)   | Pre-configured VPS platform                              |
+| Supported Platforms   | Java, PHP, Python, Node.js, Ruby, .NET, Docker, etc.   | Application templates (WordPress, Drupal, Node.js, etc.) |
+| Database              | Provision databases independently (RDS, DynamoDB)     | Lightsail-managed database (optional)                   |
+| Upgrade Path          | Can upgrade to EC2 for more control                    | Upgrade to EC2 when needed                               |
+
+
