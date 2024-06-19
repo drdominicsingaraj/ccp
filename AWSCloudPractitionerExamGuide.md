@@ -840,4 +840,12 @@ For more detailed information on these services, you can refer to the official A
 | Database              | Provision databases independently (RDS, DynamoDB)     | Lightsail-managed database (optional)                   |
 | Upgrade Path          | Can upgrade to EC2 for more control                    | Upgrade to EC2 when needed                               |
 
+## Differences Between Amazon ECS, AWS Fargate, and Amazon ECR
+
+| Service                   | Purpose                                     | Control Level | Customization | Scalability          | Use Cases                                      |
+|---------------------------|---------------------------------------------|---------------|---------------|----------------------|------------------------------------------------|
+| Amazon ECS                | Manages Docker containers                   | High          | You can tweak EC2 instances | You control container scaling on EC2 instances | Complex microservices architectures            |
+| AWS Fargate               | Abstracts infrastructure for containers    | Low           | Define container specs; Fargate handles the rest | Isolation boundaries for each task or pod | Small to medium-sized projects                 |
+| Amazon ECR                | Securely stores and manages container images | N/A           | N/A           | N/A                  | Integrates well with ECS and Fargate           |
+
 
